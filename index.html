@@ -41,13 +41,19 @@
     </button>
     <div class="collapse navbar-collapse" id="navMenu">
       <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
-        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
-        <li class="nav-item"><a class="nav-link" href="#limited">Limited Edition</a></li>
-        <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        <li class="nav-item ms-lg-3">
+        <li class="nav-item"><a class="nav-link" href="#home" data-i18n="navHome">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about" data-i18n="navAbout">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#menu" data-i18n="navMenu">Menu</a></li>
+        <li class="nav-item"><a class="nav-link" href="#limited" data-i18n="navLimited">Limited Edition</a></li>
+        <li class="nav-item"><a class="nav-link" href="#limited-offers" data-i18n="navLimitedOffers">Limited Offers</a></li>
+        <li class="nav-item"><a class="nav-link" href="#reviews" data-i18n="navReviews">Reviews</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="navContact">Contact</a></li>
+        <li class="nav-item ms-lg-2">
+          <button class="btn lang-toggle-btn" id="langToggle" type="button" aria-label="Switch language">
+            <i class="bi bi-translate"></i> <span id="langToggleLabel">العربية</span>
+          </button>
+        </li>
+        <li class="nav-item ms-lg-2">
           <button class="btn cart-btn" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" aria-label="Open cart">
             <i class="bi bi-bag-fill"></i>
             <span class="cart-count" id="cartCount">0</span>
@@ -63,21 +69,21 @@
   <div class="hero-overlay"></div>
   <div class="hero-embers" id="hero-embers"></div>
   <div class="container hero-content">
-    <p class="hero-eyebrow reveal">MALLAWI · MINYA</p>
+    <p class="hero-eyebrow reveal" data-i18n="heroEyebrow">MALLAWI · MINYA</p>
     <h1 class="hero-title reveal">
       <span class="d-block">DR.</span>
       <span class="d-block hero-title-accent">NASHVILLE</span>
     </h1>
-    <p class="hero-slogan reveal">Nashville Hot Fried Chicken &amp; Smash Burgers — fired up, stacked high, no shortcuts.</p>
+    <p class="hero-slogan reveal" data-i18n="heroSlogan">Nashville Hot Fried Chicken &amp; Smash Burgers — fired up, stacked high, no shortcuts.</p>
     <div class="hero-cta reveal">
-      <a href="#menu" class="btn btn-fire btn-lg">View Menu <i class="bi bi-arrow-down-short"></i></a>
+      <a href="#menu" class="btn btn-fire btn-lg"><span data-i18n="heroCtaMenu">View Menu</span> <i class="bi bi-arrow-down-short"></i></a>
       <a href="https://wa.me/201031219787" target="_blank" rel="noopener" class="btn btn-outline-fire btn-lg">
-        <i class="bi bi-whatsapp"></i> Order on WhatsApp
+        <i class="bi bi-whatsapp"></i> <span data-i18n="heroCtaWhatsapp">Order on WhatsApp</span>
       </a>
     </div>
   </div>
   <div class="scroll-cue reveal">
-    <span></span> Scroll
+    <span></span> <span data-i18n="heroScroll">Scroll</span>
   </div>
 </header>
 
@@ -91,40 +97,40 @@
     <img src="our-story.jpg" alt="Dr. Nashville kitchen">
   </div>
   <div class="about-stamp">
-            <span>EST.</span>
-            <strong>MALLAWI</strong>
+            <span data-i18n="aboutEst">EST.</span>
+            <strong data-i18n="aboutMallawi">MALLAWI</strong>
           </div>
         </div>
       </div>
       <div class="col-lg-6 reveal">
-        <p class="section-eyebrow">Our Story</p>
-        <h2 class="section-title">Chicken that earns its heat.</h2>
-        <p class="about-text">
+        <p class="section-eyebrow" data-i18n="aboutEyebrow">Our Story</p>
+        <h2 class="section-title" data-i18n="aboutTitle">Chicken that earns its heat.</h2>
+        <p class="about-text" data-i18n="aboutText1">
           Dr. Nashville started with one idea: Nashville-style hot fried chicken doesn't exist properly in Mallawi — so we built it ourselves. Every piece is brined, hand-breaded and fried to order, then finished the way it should be: loud, crisp, and dripping with flavor.
         </p>
-        <p class="about-text">
+        <p class="about-text" data-i18n="aboutText2">
           Alongside our chicken, our Smash bar takes the same obsession into beef — thin-smashed, hard-seared patties stacked with melted cheese and house sauces. No freezers full of shortcuts. Just fire, fat, and technique.
         </p>
         <div class="row g-4 mt-2">
           <div class="col-6 col-md-4">
             <div class="why-card">
               <i class="bi bi-lightning-charge-fill"></i>
-              <h6>Cooked to Order</h6>
-              <p>Never sitting under a heat lamp.</p>
+              <h6 data-i18n="whyCard1Title">Cooked to Order</h6>
+              <p data-i18n="whyCard1Desc">Never sitting under a heat lamp.</p>
             </div>
           </div>
           <div class="col-6 col-md-4">
             <div class="why-card">
               <i class="bi bi-egg-fried"></i>
-              <h6>Real Ingredients</h6>
-              <p>Fresh brine, real spice blends.</p>
+              <h6 data-i18n="whyCard2Title">Real Ingredients</h6>
+              <p data-i18n="whyCard2Desc">Fresh brine, real spice blends.</p>
             </div>
           </div>
           <div class="col-6 col-md-4">
             <div class="why-card">
               <i class="bi bi-truck"></i>
-              <h6>Fast Delivery</h6>
-              <p>Straight from the fryer to your door.</p>
+              <h6 data-i18n="whyCard3Title">Fast Delivery</h6>
+              <p data-i18n="whyCard3Desc">Straight from the fryer to your door.</p>
             </div>
           </div>
         </div>
@@ -137,25 +143,25 @@
 <section id="menu" class="section menu-section">
   <div class="container">
     <div class="text-center mb-5 reveal">
-      <p class="section-eyebrow justify-content-center">The Menu</p>
-      <h2 class="section-title">Everything's Fired Up</h2>
-      <p class="section-sub">Every category, every box. Prices in Egyptian Pounds (L.E).</p>
+      <p class="section-eyebrow justify-content-center" data-i18n="menuEyebrow">The Menu</p>
+      <h2 class="section-title" data-i18n="menuTitle">Everything's Fired Up</h2>
+      <p class="section-sub" data-i18n="menuSub">Every category, every box. Prices in Egyptian Pounds (L.E).</p>
     </div>
 
     <!-- Category Filters -->
     <div class="menu-filters reveal" id="menuFilters">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="smash">Smash سماش</button>
-      <button class="filter-btn" data-filter="chicken">Chicken Sandwiches</button>
-      <button class="filter-btn" data-filter="rolls">Rolls رولز</button>
-      <button class="filter-btn" data-filter="duck">Duck Meals دوك ميل</button>
-      <button class="filter-btn" data-filter="trays">Trays الصواني</button>
-      <button class="filter-btn" data-filter="strips">Strips Meals</button>
-      <button class="filter-btn" data-filter="sides">Side Items</button>
-      <button class="filter-btn" data-filter="extras">Extras الإضافات</button>
-      <button class="filter-btn" data-filter="drinks">Drinks مشروبات</button>
-      <button class="filter-btn" data-filter="sauces">Sauces صوص</button>
-      <button class="filter-btn" data-filter="limited">Limited Edition</button>
+      <button class="filter-btn active" data-filter="all" data-i18n="filterAll">All</button>
+      <button class="filter-btn" data-filter="smash" data-i18n="filterSmash">Smash سماش</button>
+      <button class="filter-btn" data-filter="chicken" data-i18n="filterChicken">Chicken Sandwiches</button>
+      <button class="filter-btn" data-filter="rolls" data-i18n="filterRolls">Rolls رولز</button>
+      <button class="filter-btn" data-filter="duck" data-i18n="filterDuck">Duck Meals دوك ميل</button>
+      <button class="filter-btn" data-filter="trays" data-i18n="filterTrays">Trays الصواني</button>
+      <button class="filter-btn" data-filter="strips" data-i18n="filterStrips">Strips Meals</button>
+      <button class="filter-btn" data-filter="sides" data-i18n="filterSides">Side Items</button>
+      <button class="filter-btn" data-filter="extras" data-i18n="filterExtras">Extras الإضافات</button>
+      <button class="filter-btn" data-filter="drinks" data-i18n="filterDrinks">Drinks مشروبات</button>
+      <button class="filter-btn" data-filter="sauces" data-i18n="filterSauces">Sauces صوص</button>
+      <button class="filter-btn" data-filter="limited" data-i18n="filterLimited">Limited Edition</button>
     </div>
 
     <div class="row g-4" id="menuGrid"></div>
@@ -167,11 +173,30 @@
   <div class="limited-bg"></div>
   <div class="container">
     <div class="text-center mb-5 reveal">
-      <p class="section-eyebrow justify-content-center light">Limited Edition</p>
-      <h2 class="section-title light">The Big Leagues</h2>
-      <p class="section-sub light">Our largest, most loaded builds — while supplies last.</p>
+      <p class="section-eyebrow justify-content-center light" data-i18n="limitedEyebrow">Limited Edition</p>
+      <h2 class="section-title light" data-i18n="limitedTitle">The Big Leagues</h2>
+      <p class="section-sub light" data-i18n="limitedSub">Our largest, most loaded builds — while supplies last.</p>
     </div>
     <div class="row g-4" id="limitedGrid"></div>
+  </div>
+</section>
+
+<!-- ===== Limited Offers ===== -->
+<section id="limited-offers" class="section limited-offers-section">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <p class="section-eyebrow justify-content-center" data-i18n="limitedOffersEyebrow">Limited Offers</p>
+      <h2 class="section-title" data-i18n="limitedOffersTitle">Deals Worth Firing Up For</h2>
+      <p class="section-sub" data-i18n="limitedOffersSub">Our current offers, all in one place.</p>
+    </div>
+    <div class="row g-4" id="limitedOffersGrid">
+      <div class="col-12">
+        <div class="limited-empty reveal">
+          <i class="bi bi-hourglass-split"></i>
+          <p data-i18n="limitedOffersEmpty">No offers running right now — check back soon for our next deal.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -179,30 +204,30 @@
 <section id="reviews" class="section reviews-section">
   <div class="container">
     <div class="text-center mb-5 reveal">
-      <p class="section-eyebrow justify-content-center">Customer Reviews</p>
-      <h2 class="section-title">Word on the Street</h2>
+      <p class="section-eyebrow justify-content-center" data-i18n="reviewsEyebrow">Customer Reviews</p>
+      <h2 class="section-title" data-i18n="reviewsTitle">Word on the Street</h2>
     </div>
     <div id="reviewsCarousel" class="carousel slide reveal" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
           <div class="review-card mx-auto">
             <div class="review-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-            <p>"The Dr Smash is unreal — crispy edges, melted cheese, perfect sauce ratio. Best smash burger in Minya, easily."</p>
-            <span class="review-name">— Ahmed K.</span>
+            <p data-i18n="review1Text">"The Dr Smash is unreal — crispy edges, melted cheese, perfect sauce ratio. Best smash burger in Minya, easily."</p>
+            <span class="review-name" data-i18n="review1Name">— Ahmed K.</span>
           </div>
         </div>
         <div class="carousel-item">
           <div class="review-card mx-auto">
             <div class="review-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-            <p>"Ordered the Family Box for a get-together — everyone went quiet the second the box opened. Insanely crispy."</p>
-            <span class="review-name">— Mariam S.</span>
+            <p data-i18n="review2Text">"Ordered the Family Box for a get-together — everyone went quiet the second the box opened. Insanely crispy."</p>
+            <span class="review-name" data-i18n="review2Name">— Mariam S.</span>
           </div>
         </div>
         <div class="carousel-item">
           <div class="review-card mx-auto">
             <div class="review-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-            <p>"Fast delivery, still hot, still crunchy. The Solo Nash lives up to the name — bring napkins."</p>
-            <span class="review-name">— Youssef M.</span>
+            <p data-i18n="review3Text">"Fast delivery, still hot, still crunchy. The Solo Nash lives up to the name — bring napkins."</p>
+            <span class="review-name" data-i18n="review3Name">— Youssef M.</span>
           </div>
         </div>
       </div>
@@ -220,8 +245,8 @@
 <section id="contact" class="section contact-section">
   <div class="container">
     <div class="text-center mb-5 reveal">
-      <p class="section-eyebrow justify-content-center light">Get In Touch</p>
-      <h2 class="section-title light">Come Get Some</h2>
+      <p class="section-eyebrow justify-content-center light" data-i18n="contactEyebrow">Get In Touch</p>
+      <h2 class="section-title light" data-i18n="contactTitle">Come Get Some</h2>
     </div>
     <div class="row g-4">
       <div class="col-lg-5 reveal">
@@ -229,37 +254,37 @@
           <div class="contact-row">
             <i class="bi bi-geo-alt-fill"></i>
             <div>
-              <h6>Address</h6>
-              <p>Mallawi, Minya — Atef Barakat St, in front of El-Horreya School, above Al-Kahf Café</p>
+              <h6 data-i18n="contactAddressLabel">Address</h6>
+              <p data-i18n="contactAddressValue">Mallawi, Minya — Atef Barakat St, in front of El-Horreya School, above Al-Kahf Café</p>
             </div>
           </div>
           <div class="contact-row">
             <i class="bi bi-telephone-fill"></i>
             <div>
-              <h6>Phone</h6>
+              <h6 data-i18n="contactPhoneLabel">Phone</h6>
               <p><a href="tel:+201124069940">01124069940</a></p>
             </div>
           </div>
           <div class="contact-row">
             <i class="bi bi-whatsapp"></i>
             <div>
-              <h6>WhatsApp</h6>
+              <h6 data-i18n="contactWhatsappLabel">WhatsApp</h6>
               <p><a href="https://wa.me/201031219787" target="_blank" rel="noopener">01031219787</a></p>
             </div>
           </div>
           <div class="contact-row">
             <i class="bi bi-clock-fill"></i>
             <div>
-              <h6>Opening Hours</h6>
-              <p>Daily — 1:00 PM to 2:00 AM</p>
+              <h6 data-i18n="contactHoursLabel">Opening Hours</h6>
+              <p data-i18n="contactHoursValue">Daily — 1:00 PM to 2:00 AM</p>
             </div>
           </div>
           <div class="contact-actions">
             <a href="tel:+201124069940" class="btn btn-fire w-100">
-              <i class="bi bi-telephone-fill"></i> Call Now
+              <i class="bi bi-telephone-fill"></i> <span data-i18n="contactCallNow">Call Now</span>
             </a>
             <a href="https://wa.me/201031219787" target="_blank" rel="noopener" class="btn btn-whatsapp w-100">
-              <i class="bi bi-whatsapp"></i> WhatsApp Us
+              <i class="bi bi-whatsapp"></i> <span data-i18n="contactWhatsappUs">WhatsApp Us</span>
             </a>
           </div>
         </div>
@@ -267,8 +292,8 @@
       <div class="col-lg-7 reveal">
         <div class="map-placeholder">
           <i class="bi bi-map"></i>
-          <p>Google Maps — Mallawi, Minya</p>
-          <a href="https://www.google.com/maps/search/?api=1&query=Mallawi+Minya+Atef+Barakat+Street" target="_blank" rel="noopener" class="btn btn-outline-fire btn-sm">
+          <p data-i18n="contactMapText">Google Maps — Mallawi, Minya</p>
+          <a href="https://www.google.com/maps/search/?api=1&query=Mallawi+Minya+Atef+Barakat+Street" target="_blank" rel="noopener" class="btn btn-outline-fire btn-sm" data-i18n="contactMapBtn">
             Open in Google Maps
           </a>
         </div>
@@ -285,7 +310,7 @@
         <a class="navbar-brand" href="#home">
           <img src="logo.png" alt="Dr. Nashville" class="brand-logo footer-logo">
         </a>
-        <p class="footer-tag">Nashville Hot Fried Chicken &amp; Smash Burgers.</p>
+        <p class="footer-tag" data-i18n="footerTagline">Nashville Hot Fried Chicken &amp; Smash Burgers.</p>
         <div class="social-icons">
           <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
           <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
@@ -293,19 +318,20 @@
         </div>
       </div>
       <div class="col-md-4">
-        <h6 class="footer-heading">Quick Links</h6>
+        <h6 class="footer-heading" data-i18n="footerQuickLinks">Quick Links</h6>
         <ul class="footer-links">
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#menu">Menu</a></li>
-          <li><a href="#limited">Limited Edition</a></li>
-          <li><a href="#reviews">Reviews</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about" data-i18n="footerAboutUs">About Us</a></li>
+          <li><a href="#menu" data-i18n="navMenu">Menu</a></li>
+          <li><a href="#limited" data-i18n="navLimited">Limited Edition</a></li>
+          <li><a href="#limited-offers" data-i18n="navLimitedOffers">Limited Offers</a></li>
+          <li><a href="#reviews" data-i18n="navReviews">Reviews</a></li>
+          <li><a href="#contact" data-i18n="navContact">Contact</a></li>
         </ul>
       </div>
       <div class="col-md-4">
-        <h6 class="footer-heading">Contact</h6>
+        <h6 class="footer-heading" data-i18n="footerContactHeading">Contact</h6>
         <ul class="footer-links">
-          <li><i class="bi bi-geo-alt-fill"></i> Mallawi, Minya</li>
+          <li><i class="bi bi-geo-alt-fill"></i> <span data-i18n="footerMallawi">Mallawi, Minya</span></li>
           <li><i class="bi bi-telephone-fill"></i> 01124069940</li>
           <li><i class="bi bi-whatsapp"></i> 01031219787</li>
         </ul>
@@ -313,8 +339,8 @@
     </div>
     <hr>
     <div class="footer-bottom">
-      <p>&copy; <span id="year"></span> Dr. Nashville. All Rights Reserved.</p>
-      <p>Designed &amp; Developed by <strong>Abdo Elattar</strong></p>
+      <p>&copy; <span id="year"></span> Dr. Nashville. <span data-i18n="footerRights">All Rights Reserved.</span></p>
+      <p><span data-i18n="footerDesignedBy">Designed &amp; Developed by</span> <strong>Abdo Elattar</strong></p>
     </div>
   </div>
 </footer>
@@ -325,19 +351,29 @@
 <!-- ===== Cart Offcanvas ===== -->
 <div class="offcanvas offcanvas-end cart-offcanvas" tabindex="-1" id="cartOffcanvas">
   <div class="offcanvas-header">
-    <h5 class="offcanvas-title"><i class="bi bi-bag-fill"></i> Your Cart</h5>
+    <h5 class="offcanvas-title"><i class="bi bi-bag-fill"></i> <span data-i18n="cartTitle">Your Cart</span></h5>
     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body d-flex flex-column">
     <div id="cartItems" class="cart-items flex-grow-1"></div>
+    <div class="cart-customer-info">
+      <div class="variant-group mb-2">
+        <label data-i18n="cartPhoneLabel">Phone Number</label>
+        <input type="tel" id="customerPhone" class="form-control cart-input" placeholder="01xxxxxxxxx" data-i18n-placeholder="cartPhonePlaceholder">
+      </div>
+      <div class="variant-group mb-2">
+        <label data-i18n="cartAddressLabel">Delivery Address</label>
+        <input type="text" id="customerAddress" class="form-control cart-input" placeholder="Street, area, landmark..." data-i18n-placeholder="cartAddressPlaceholder">
+      </div>
+    </div>
     <div class="cart-summary">
       <div class="d-flex justify-content-between mb-2">
-        <span>Total</span>
+        <span data-i18n="cartTotalLabel">Total</span>
         <strong id="cartTotal">0 L.E</strong>
       </div>
-      <button class="btn btn-outline-fire w-100 mb-2" id="emptyCartBtn"><i class="bi bi-trash3"></i> Empty Cart</button>
+      <button class="btn btn-outline-fire w-100 mb-2" id="emptyCartBtn"><i class="bi bi-trash3"></i> <span data-i18n="cartEmptyBtn">Empty Cart</span></button>
       <a href="https://wa.me/201031219787" target="_blank" rel="noopener" class="btn btn-fire w-100" id="checkoutBtn">
-        <i class="bi bi-whatsapp"></i> Checkout on WhatsApp
+        <i class="bi bi-whatsapp"></i> <span data-i18n="cartCheckoutBtn">Checkout on WhatsApp</span>
       </a>
     </div>
   </div>

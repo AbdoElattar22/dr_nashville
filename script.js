@@ -18,6 +18,8 @@ const MENU = [
     nameAr: "كلاسيك سماش",
     price: 120,
     desc: "Smash beef patty, cheddar, lettuce, fries, caramelized onions,Texas,BBQ.",
+    descAr:
+      "قطعة سماش لحم، جبنة تشيدر، خس، بطاطس مقلية، بصل مكرمل، صوص تكساس، باربكيو.",
   },
   {
     id: "sm2",
@@ -26,6 +28,8 @@ const MENU = [
     nameAr: "دبل سماش",
     price: 160,
     desc: "Two smash patties, double cheddar, fries, caramelized onions,Texas,BBQ.",
+    descAr:
+      "قطعتين سماش لحم، دبل تشيدر، بطاطس مقلية، بصل مكرمل، صوص تكساس، باربكيو.",
   },
   {
     id: "sm3",
@@ -34,6 +38,8 @@ const MENU = [
     nameAr: "تريبل سماش",
     price: 210,
     desc: "Three smash patties, melted cheddar,  fries, caramelized onions,Texas,BBQ.",
+    descAr:
+      "تلات قطع سماش لحم، تشيدر دايب، بطاطس مقلية، بصل مكرمل، صوص تكساس، باربكيو.",
   },
   {
     id: "sm4",
@@ -42,6 +48,8 @@ const MENU = [
     nameAr: "سماش مشروم",
     price: 190,
     desc: "Smash patties, sautéed mushroom, cheddar,  fries, caramelized onions,Bosten,BBQ.",
+    descAr:
+      "قطع سماش لحم، مشروم سوتيه، جبنة تشيدر، بطاطس مقلية، بصل مكرمل، صوص بوسطن، باربكيو.",
   },
   {
     id: "sm5",
@@ -50,6 +58,8 @@ const MENU = [
     nameAr: "سماش بيكون",
     price: 140,
     desc: "Smash patty, crispy beef bacon, cheddar,  fries, caramelized onions,Texas,BBQ.",
+    descAr:
+      "قطعة سماش لحم، بيكون لحم مقرمش، جبنة تشيدر، بطاطس مقلية، بصل مكرمل، صوص تكساس، باربكيو.",
   },
   {
     id: "sm6",
@@ -58,6 +68,8 @@ const MENU = [
     nameAr: "دكتور سماش",
     price: 200,
     desc: "Smash patty,rispy chicken fillet, —  fries, caramelized onions,Texas,BBQ,cheddar.",
+    descAr:
+      "قطعة سماش لحم مع فيليه دجاج مقرمش، بطاطس مقلية، بصل مكرمل، صوص تكساس، باربكيو، جبنة تشيدر.",
   },
   {
     id: "sm7",
@@ -66,6 +78,8 @@ const MENU = [
     nameAr: "فاير برجر",
     price: 130,
     desc: "Smash patty, spicy sauce, pickled jalapeño, cheddar, fries, caramelized onions,Texas,BBQ.",
+    descAr:
+      "قطعة سماش لحم، صوص حار، هالبينو مخلل، جبنة تشيدر، بطاطس مقلية، بصل مكرمل، صوص تكساس، باربكيو.",
   },
 
   // CHICKEN SANDWICHES
@@ -77,6 +91,7 @@ const MENU = [
     price: 160,
     priceSingle: 105,
     desc: "Crispy chicken fillet, Texas sauce, fries,1000island.",
+    descAr: "فيليه دجاج مقرمش، صوص تكساس، بطاطس مقلية، صوص ١٠٠٠ آيلاند.",
   },
   {
     id: "ch2",
@@ -86,6 +101,7 @@ const MENU = [
     price: 165,
     priceSingle: 105,
     desc: "Crispy chicken grilled, fries, Texas,katcheb.",
+    descAr: "فيليه دجاج مشوي مقرمش، بطاطس مقلية، صوص تكساس، كاتشب.",
   },
   {
     id: "ch3",
@@ -95,6 +111,7 @@ const MENU = [
     price: 175,
     priceSingle: 115,
     desc: "Crispy chicken fillet, cheddar,Texas,fries .",
+    descAr: "فيليه دجاج مقرمش، جبنة تشيدر، صوص تكساس، بطاطس مقلية.",
   },
   {
     id: "ch4",
@@ -104,6 +121,8 @@ const MENU = [
     price: 180,
     priceSingle: 120,
     desc: "Crispy chicken fillet, smoky BBQ sauce, Texas,Bacon,fries.",
+    descAr:
+      "فيليه دجاج مقرمش، صوص باربكيو مدخن، صوص تكساس، بيكون، بطاطس مقلية.",
   },
   {
     id: "ch5",
@@ -113,6 +132,7 @@ const MENU = [
     price: 185,
     priceSingle: 125,
     desc: "Crispy chicken fillet, ranch sauce, fries, mayo,mozzarella sticks.",
+    descAr: "فيليه دجاج مقرمش، صوص رانش، بطاطس مقلية، مايونيز، أصابع موتزريلا.",
   },
   {
     id: "ch6",
@@ -122,6 +142,8 @@ const MENU = [
     price: 175,
     priceSingle: 115,
     desc: "Crispy chicken fillet, Texas,fires,pickled jalapeño,tiger sauce.",
+    descAr:
+      "فيليه دجاج مقرمش، صوص تكساس، بطاطس مقلية، هالبينو مخلل، صوص تايجر.",
   },
   {
     id: "ch7",
@@ -131,6 +153,8 @@ const MENU = [
     price: 175,
     priceSingle: 115,
     desc: "Crispy chicken fillet, honey mustard, sweetchilli,fries,smoked turkey.",
+    descAr:
+      "فيليه دجاج مقرمش، صوص عسل وخردل، سويت شيلي، بطاطس مقلية، ديك رومي مدخن.",
   },
   {
     id: "ch8",
@@ -140,6 +164,7 @@ const MENU = [
     price: 195,
     priceSingle: 130,
     desc: "Crispy chicken fillet, creamy onion sauce, fries,onion rings .",
+    descAr: "فيليه دجاج مقرمش، صوص البصل الكريمي، بطاطس مقلية، حلقات بصل.",
   },
   {
     id: "ch9",
@@ -149,6 +174,7 @@ const MENU = [
     price: 200,
     priceSingle: 130,
     desc: " chicken fillet, coleslaw, fries, 1000island.",
+    descAr: "فيليه دجاج، كولسلو، بطاطس مقلية، صوص ١٠٠٠ آيلاند.",
   },
   {
     id: "ch10",
@@ -157,6 +183,8 @@ const MENU = [
     nameAr: "بيج فلير هالبينو",
     price: 160,
     desc: "Three fillets, pickled jalapeño, mayo,BBQ,Texas,cheddar,.",
+    descAr:
+      "تلات فيليه دجاج، هالبينو مخلل، مايونيز، باربكيو، صوص تكساس، جبنة تشيدر.",
   },
   {
     id: "ch11",
@@ -165,6 +193,7 @@ const MENU = [
     nameAr: "بيج فلير بافلو",
     price: 165,
     desc: "Three fillets, buffalo sauce, mayo,BBQ,cheddar.",
+    descAr: "تلات فيليه دجاج، صوص بافلو، مايونيز، باربكيو، جبنة تشيدر.",
   },
   {
     id: "ch12",
@@ -173,6 +202,7 @@ const MENU = [
     nameAr: "فلير ناش",
     price: 170,
     desc: "Three fillets,coleslaw, 1000island.",
+    descAr: "تلات فيليه دجاج، كولسلو، صوص ١٠٠٠ آيلاند.",
   },
 
   // ROLLS
@@ -183,6 +213,7 @@ const MENU = [
     nameAr: "اوريجينال رول",
     price: 100,
     desc: "Roll bread, lettuce, chicken strips, fries, cheddar,Texas.",
+    descAr: "خبز رول، خس، سترپس دجاج، بطاطس مقلية، جبنة تشيدر، صوص تكساس.",
   },
   {
     id: "rl2",
@@ -191,6 +222,8 @@ const MENU = [
     nameAr: "فلاي راب",
     price: 115,
     desc: "Wrapped roll, chicken, lettuce, fries,  smoked turkey,cheddar,Bistan,BBQ.",
+    descAr:
+      "رول ملفوف، دجاج، خس، بطاطس مقلية، ديك رومي مدخن، جبنة تشيدر، صوص بوسطن، باربكيو.",
   },
   {
     id: "rl3",
@@ -199,6 +232,7 @@ const MENU = [
     nameAr: "تايجر شوت",
     price: 115,
     desc: "Roll bread, chicken strips, tiger sauce,pickled jalapeño,Texas .",
+    descAr: "خبز رول، سترپس دجاج، صوص تايجر، هالبينو مخلل، صوص تكساس.",
   },
   {
     id: "rl4",
@@ -207,6 +241,7 @@ const MENU = [
     nameAr: "جاينت رول",
     price: 145,
     desc: "Large roll, extra chicken, mozzarella sticks, smoked turkey,.",
+    descAr: "رول كبير، دجاج إضافي، أصابع موتزريلا، ديك رومي مدخن.",
   },
   {
     id: "rl5",
@@ -215,6 +250,7 @@ const MENU = [
     nameAr: "بوسطن آيسلاند",
     price: 110,
     desc: "Roll bread, chicken strips, Boston sauce,cheddar,Bosten,1000island .",
+    descAr: "خبز رول، سترپس دجاج، صوص بوسطن، جبنة تشيدر، صوص ١٠٠٠ آيلاند.",
   },
   {
     id: "rl6",
@@ -223,6 +259,7 @@ const MENU = [
     nameAr: "مايتي بوتيتو",
     price: 50,
     desc: "Loaded potato roll with ketchup,Garlicky.",
+    descAr: "رول بطاطس محملة بالكاتشب وصوص الثوم.",
   },
 
   // TRAYS
@@ -232,7 +269,9 @@ const MENU = [
     nameEn: "Dala3 Tray",
     nameAr: "صنية الدلع",
     price: 400,
-    desc: "Sharing tray — broasted pieces, duck rizo, fries.",
+    desc: "Sharing tray — 4 broasted ,4 strips  duck rizo, fries cheddar, 2 coleslaw, 2 garlicky,4 bread .",
+    descAr:
+      " صينية المشاركة — ٤ قطع بروست، ٤ قطع ستربس، أرز بط، بطاطس شيدر، ٢ كول سلو.",
   },
   {
     id: "tr2",
@@ -240,7 +279,9 @@ const MENU = [
     nameEn: "Duetto Tray",
     nameAr: "صنية الدويتو",
     price: 440,
-    desc: "Sharing tray for two — mixed fried chicken pieces, sides.",
+    desc: "Sharing tray for two — 2 broasted , 2 strips, 1 golden mountain , 1 texas ambier , 1 garlicky , 1 coleslaw , 2bread .",
+    descAr:
+      " صينية المشاركة لشخصين — ٢ قطعة بروست، ٢ قطعة ستربس، ١ جولدن ماونتن، ١ تكساس أمبر، ١ جارليكي، ١ كول سلو، ٢ رغيف خبز.",
   },
   {
     id: "tr3",
@@ -248,7 +289,9 @@ const MENU = [
     nameEn: "Family Tray",
     nameAr: "صنية العيلة",
     price: 520,
-    desc: "Family-size tray — broasted, rizo, duck box, sides.",
+    desc: "Family-size tray — 9 broasted , duck rizo, fries cheddar , jar garlicky , jar coleslaw , 5 bread , 1Lpepsi.",
+    descAr:
+      " صينية العائلة — ٩ قطع بروست، أرز بط، بطاطس شيدر، برطمان جارليكي، برطمان كول سلو، ٥ أرغفة خبز، وبيبسي ١ لتر.",
   },
   {
     id: "tr4",
@@ -256,7 +299,9 @@ const MENU = [
     nameEn: "Mix Tray",
     nameAr: "صنية الميكس",
     price: 540,
-    desc: "Mixed tray — strips, broasted, rizo, coleslaw, sides.",
+    desc: "Mixed tray — 6 strips, 6 broasted, duck rizo,fries cheddar, 3 coleslaw, 3 garlicky , 4 bread.",
+    descAr:
+      "الصينية المشكلة — ٦ قطع ستربس، ٦ قطع بروست، أرز بط، بطاطس شيدر، ٣ كول سلو، ٣ جارليكي، ٤ أرغفة خبز.ة.",
   },
   {
     id: "tr5",
@@ -264,7 +309,9 @@ const MENU = [
     nameEn: "Monster Tray",
     nameAr: "صنية الوحش",
     price: 820,
-    desc: "Our largest tray — loaded with pieces, sides and sauces.",
+    desc: "Our largest tray — 9 strips, 9 broasted, duck rizo,fries cheddar, 4 coleslaw, 4 garlicky , 8 bread , 1Lpepsi .",
+    descAr:
+      " أكبر صينية لدينا — ٩ قطع ستربس، ٩ قطع بروست، أرز بط، بطاطس شيدر، ٤ كول سلو، ٤ جارليكي، ٨ أرغفة خبز، وبيبسي ١ لتر.",
   },
 
   // STRIPS MEALS
@@ -275,6 +322,7 @@ const MENU = [
     nameAr: "٣ قطع استربس",
     price: 155,
     desc: "3 crispy chicken strips with fries and Rizzo and garlicky.",
+    descAr: "٣ قطع استربس دجاج مقرمشة مع بطاطس مقلية وريزو وصوص ثوم.",
   },
   {
     id: "st2",
@@ -283,6 +331,7 @@ const MENU = [
     nameAr: "٦ قطع استربس",
     price: 260,
     desc: "6 crispy chicken strips with fries and Rizzo and garlicky.",
+    descAr: "٦ قطع استربس دجاج مقرمشة مع بطاطس مقلية وريزو وصوص ثوم.",
   },
   {
     id: "st3",
@@ -291,6 +340,7 @@ const MENU = [
     nameAr: "٩ قطع استربس",
     price: 395,
     desc: "9 crispy chicken strips with fries and Rizzo and garlicky.",
+    descAr: "٩ قطع استربس دجاج مقرمشة مع بطاطس مقلية وريزو وصوص ثوم.",
   },
   {
     id: "st4",
@@ -299,6 +349,7 @@ const MENU = [
     nameAr: "١٢ قطعة استربس",
     price: 495,
     desc: "12 crispy chicken strips with fries and Rizzo and garlicky.",
+    descAr: "١٢ قطعة استربس دجاج مقرمشة مع بطاطس مقلية وريزو وصوص ثوم.",
   },
 
   // DUCK MEALS
@@ -309,6 +360,7 @@ const MENU = [
     nameAr: "ناش بوكس",
     price: 125,
     desc: "2 pieces — fries, Rizzo, coleslaw,garlicky.",
+    descAr: "قطعتين — بطاطس مقلية، ريزو، كولسلو، صوص ثوم.",
   },
   {
     id: "dk2",
@@ -316,7 +368,8 @@ const MENU = [
     nameEn: "Quarter Box",
     nameAr: "كوارتر بوكس",
     price: 210,
-    desc: "4 pieces — fries,2Rizzo, coleslaw,garlicky.",
+    desc: "4 pieces — fries,2 Rizzo, coleslaw,garlicky.",
+    descAr: "٤ قطع — بطاطس مقلية، ريزوهين، كولسلو، صوص ثوم.",
   },
   {
     id: "dk3",
@@ -324,7 +377,8 @@ const MENU = [
     nameEn: "Big Box",
     nameAr: "بيج بوكس",
     price: 300,
-    desc: "6 pieces — fries, 3 Rizzo, 3 coleslaw,2 garlicky.",
+    desc: "6 pieces — fries, 3 Rizzo, 3 coleslaw,3 garlicky.",
+    descAr: "٦ قطع — بطاطس مقلية، ٣ ريزو، ٣ كولسلو،  3 صوص ثوم.",
   },
   {
     id: "dk4",
@@ -333,6 +387,7 @@ const MENU = [
     nameAr: "كومبو بوكس",
     price: 430,
     desc: "9 pieces  —fries, 3 Rizzo,3 coleslaw,3 garlicky,1Lpepsi.",
+    descAr: "٩ قطع — بطاطس مقلية، ٣ ريزو، ٣ كولسلو، ٣ صوص ثوم، عصير بيبسي لتر.",
   },
   {
     id: "dk5",
@@ -340,7 +395,9 @@ const MENU = [
     nameEn: "Duck Box",
     nameAr: "دوك بوكس",
     price: 570,
-    desc: "13 pieces  — fries, 4 Rizzo, 4 coleslaw,4 garlicky,1Lpepsi.",
+    desc: "12 pieces  — fries, 4 Rizzo, 4 coleslaw,4 garlicky,1Lpepsi.",
+    descAr:
+      "١٣ قطعة — بطاطس مقلية، ٤ ريزو، ٤ كولسلو، ٤ صوص ثوم، عصير بيبسي لتر.",
   },
   {
     id: "dk6",
@@ -349,6 +406,8 @@ const MENU = [
     nameAr: "كينج بوكس",
     price: 720,
     desc: "15 pieces 5 fries, 5 Rizzo, 5 coleslaw, 5 garlicky,1Lpepsi.",
+    descAr:
+      "١٥ قطعة — ٥ بطاطس مقلية، ٥ ريزو، ٥ كولسلو، ٥ صوص ثوم، عصير بيبسي لتر.",
   },
   {
     id: "dk7",
@@ -357,6 +416,8 @@ const MENU = [
     nameAr: "فاميلي بوكس",
     price: 800,
     desc: "18 pieces, fries, 6 Rizzo, 6 coleslaw,6 garlicky,2Lpepsi.",
+    descAr:
+      "١٨ قطعة، بطاطس مقلية، ٦ ريزو، ٦ كولسلو، ٦ صوص ثوم، عصير بيبسي لترين.",
   },
 
   // SIDE ITEMS
@@ -367,6 +428,7 @@ const MENU = [
     nameAr: "وجبة الأطفال",
     price: 75,
     desc: "Broasted piece, fries, bread, rice, juice.",
+    descAr: "قطعة بروستد، بطاطس مقلية، خبز، أرز، عصير.",
   },
   {
     id: "sd2",
@@ -375,6 +437,7 @@ const MENU = [
     nameAr: "بوب ناش",
     price: 80,
     desc: "Popcorn chicken pieces, sweet chili sauce.",
+    descAr: "قطع دجاج بوب كورن مع صوص السويت شيلي.",
   },
   {
     id: "sd3",
@@ -383,6 +446,7 @@ const MENU = [
     nameAr: "دوك فرايز",
     price: 90,
     desc: "Loaded fries — chicken strips, cheddar,Texas, jalapeño.",
+    descAr: "بطاطس محملة — سترپس دجاج، جبنة تشيدر، صوص تكساس، هالبينو.",
   },
   {
     id: "sd4",
@@ -391,6 +455,7 @@ const MENU = [
     nameAr: "دوك ريزو عادي",
     price: 90,
     desc: "Rice with chicken strips, sweet chili, Texas.",
+    descAr: "أرز مع سترپس دجاج، صوص سويت شيلي، تكساس.",
   },
   {
     id: "sd5",
@@ -399,6 +464,7 @@ const MENU = [
     nameAr: "دوك ريزو سبايسي",
     price: 90,
     desc: "Rice with chicken strips, Tiger sauce, jalapeño, Texas.",
+    descAr: "أرز مع سترپس دجاج، صوص تايجر، هالبينو، تكساس.",
   },
   {
     id: "sd6",
@@ -407,6 +473,7 @@ const MENU = [
     nameAr: "دوك فاهيتا",
     price: 95,
     desc: "Rice, Fajita, BBQ.",
+    descAr: "أرز، فاهيتا، صوص باربكيو.",
   },
   {
     id: "sd7",
@@ -415,6 +482,8 @@ const MENU = [
     nameAr: "دوك ميكس",
     price: 180,
     desc: "1/3 duck Rizo, 1/3fahita, 1/3 chease fries,with de.basville sauces.",
+    descAr:
+      "ثلث دوك ريزو، ثلث فاهيتا، ثلث بطاطس بالجبنة، مع صوصات دكتور ناشفيل.",
   },
   {
     id: "sd8",
@@ -423,6 +492,7 @@ const MENU = [
     nameAr: "جولد فرايز",
     price: 65,
     desc: "Fries topped with cheddar sauce.",
+    descAr: "بطاطس مقلية مغطاة بصوص التشيدر.",
   },
   {
     id: "sd9",
@@ -431,6 +501,7 @@ const MENU = [
     nameAr: "فرايز سوبريم",
     price: 100,
     desc: "Fries, beef bacon, cheddar, strips pieces,,smoked turkey,testy.",
+    descAr: "بطاطس مقلية، بيكون لحم، جبنة تشيدر، قطع استربس، ديك رومي مدخن.",
   },
   {
     id: "sd10",
@@ -439,6 +510,7 @@ const MENU = [
     nameAr: "سماش فرايز",
     price: 95,
     desc: "Fries, smash beef pieces, cheddar sauce.",
+    descAr: "بطاطس مقلية، قطع لحم سماش، صوص التشيدر.",
   },
 
   // EXTRAS
@@ -449,6 +521,7 @@ const MENU = [
     nameAr: "أرز ريزو",
     price: 20,
     desc: "Side portion of our seasoned rizo rice.",
+    descAr: "طبق جانبي من أرز الريزو المتبل بتتبيلتنا الخاصة.",
   },
   {
     id: "ex2",
@@ -457,6 +530,7 @@ const MENU = [
     nameAr: "فرايز",
     price: 20,
     desc: "Classic crispy golden fries, lightly salted.",
+    descAr: "بطاطس مقلية ذهبية مقرمشة، مملحة بالقدر المناسب.",
   },
   {
     id: "ex3",
@@ -465,6 +539,7 @@ const MENU = [
     nameAr: "خبز",
     price: 5,
     desc: "Fresh side bread.",
+    descAr: "خبز جانبي طازة.",
   },
   {
     id: "ex4",
@@ -473,6 +548,7 @@ const MENU = [
     nameAr: "دبينج جار",
     price: 60,
     desc: "A jar of our house dipping sauce.",
+    descAr: "برطمان من صوص التغميس الخاص بينا.",
   },
   {
     id: "ex5",
@@ -481,6 +557,7 @@ const MENU = [
     nameAr: "كولسلو",
     price: 20,
     desc: "Fresh, creamy house-made coleslaw.",
+    descAr: "كولسلو طازة وكريمي، مصنوع في المطعم.",
   },
   {
     id: "ex6",
@@ -489,6 +566,7 @@ const MENU = [
     nameAr: "اصابع موتزريلا",
     price: 40,
     desc: "Crispy fried mozzarella sticks, golden and gooey.",
+    descAr: "أصابع موتزريلا مقرمشة من برة، ذايبة من جوة.",
   },
   {
     id: "ex7",
@@ -497,6 +575,7 @@ const MENU = [
     nameAr: "حلقات بصل",
     price: 40,
     desc: "Crunchy battered onion rings.",
+    descAr: "حلقات بصل مقرمشة مغطاة بالبانيه.",
   },
   {
     id: "ex8",
@@ -505,6 +584,7 @@ const MENU = [
     nameAr: "تومية",
     price: 10,
     desc: "Side portion of our house garlic sauce.",
+    descAr: "طبق جانبي من صوص الثوم الخاص بينا.",
   },
   {
     id: "ex9",
@@ -513,6 +593,7 @@ const MENU = [
     nameAr: "قطعة استربس",
     price: 45,
     desc: "One extra crispy chicken strip.",
+    descAr: "قطعة إضافية من الاستربس المقرمش.",
   },
   {
     id: "ex10",
@@ -521,6 +602,7 @@ const MENU = [
     nameAr: "قطعة بروست",
     price: 50,
     desc: "One extra broasted chicken piece.",
+    descAr: "قطعة إضافية من الدجاج البروستد.",
   },
 
   // DRINKS
@@ -531,6 +613,7 @@ const MENU = [
     nameAr: "مياه",
     price: 10,
     desc: "Chilled bottled water.",
+    descAr: "مياه معدنية مثلجة.",
   },
   {
     id: "dr2",
@@ -539,6 +622,7 @@ const MENU = [
     nameAr: "كانز",
     price: 20,
     desc: "Your choice of chilled canned soft drink.",
+    descAr: "اختيارك من المشروبات الغازية المثلجة.",
   },
   {
     id: "dr3",
@@ -547,6 +631,7 @@ const MENU = [
     nameAr: "لتر بيبسي",
     price: 40,
     desc: "1 Liter bottle of Pepsi, chilled and ready to share.",
+    descAr: "زجاجة بيبسي لتر واحد، مثلجة وجاهزة للمشاركة.",
   },
 
   // SAUCES
@@ -557,6 +642,7 @@ const MENU = [
     nameAr: "اختيارات الصوص",
     price: 20,
     desc: "Pick your dip.",
+    descAr: "اختار الصوص اللي يعجبك.",
     sauceOptions: [
       "Cheddar",
       "Texas",
@@ -567,16 +653,28 @@ const MENU = [
       "Honey Mustard",
       "Tiger",
     ],
+    sauceOptionsAr: [
+      "تشيدر",
+      "تكساس",
+      "باربكيو",
+      "بوسطن",
+      "رانش",
+      "سويت شيلي",
+      "عسل وخردل",
+      "تايجر",
+    ],
   },
 
   // LIMITED EDITION
   {
     id: "le1",
     cat: "limited",
-    nameEn: "Crep Naz",
+    nameEn: "Crep",
     nameAr: "كريب ناز",
     price: 100,
     desc: "Toasted folded flatbread stuffed with chicken, melted cheese, fries and house sauces — pick your heat.",
+    descAr:
+      "خبز مطوي محمر محشو بالدجاج، جبنة ذايبة، بطاطس مقلية وصوصات البيت — اختار درجة الحرارة اللي تناسبك.",
     styleChoice: true,
   },
   {
@@ -584,13 +682,345 @@ const MENU = [
     cat: "limited",
     nameEn: "Casadia",
     nameAr: "كاساديا",
-    price: 120,
+    price: 130,
     desc: "Grilled loaded quesadilla-style wrap, sliced chicken, melted cheese, crispy fries and creamy sauce, finished with fresh herbs — pick your heat.",
+    descAr:
+      "راب كاساديا مشوي محمل، شرائح دجاج، جبنة ذايبة، بطاطس مقرمشة وصوص كريمي، متزين بالأعشاب الطازة — اختار درجة الحرارة اللي تناسبك.",
     styleChoice: true,
   },
 ];
 
 /* Limited Edition — Crep Naz and Casadia, shown with the real photos you sent. */
+/* =========================================================
+   LANGUAGE / TRANSLATION SYSTEM
+   ========================================================= */
+const TRANSLATIONS = {
+  en: {
+    navHome: "Home",
+    navAbout: "About",
+    navMenu: "Menu",
+    navLimited: "Limited Edition",
+    navLimitedOffers: "Limited Offers",
+    navReviews: "Reviews",
+    navContact: "Contact",
+
+    heroEyebrow: "MALLAWI · MINYA",
+    heroSlogan:
+      "Nashville Hot Fried Chicken & Smash Burgers — fired up, stacked high, no shortcuts.",
+    heroCtaMenu: "View Menu",
+    heroCtaWhatsapp: "Order on WhatsApp",
+    heroScroll: "Scroll",
+
+    aboutEst: "EST.",
+    aboutMallawi: "MALLAWI",
+    aboutEyebrow: "Our Story",
+    aboutTitle: "Chicken that earns its heat.",
+    aboutText1:
+      "Dr. Nashville started with one idea: Nashville-style hot fried chicken doesn't exist properly in Mallawi — so we built it ourselves. Every piece is brined, hand-breaded and fried to order, then finished the way it should be: loud, crisp, and dripping with flavor.",
+    aboutText2:
+      "Alongside our chicken, our Smash bar takes the same obsession into beef — thin-smashed, hard-seared patties stacked with melted cheese and house sauces. No freezers full of shortcuts. Just fire, fat, and technique.",
+    whyCard1Title: "Cooked to Order",
+    whyCard1Desc: "Never sitting under a heat lamp.",
+    whyCard2Title: "Real Ingredients",
+    whyCard2Desc: "Fresh brine, real spice blends.",
+    whyCard3Title: "Fast Delivery",
+    whyCard3Desc: "Straight from the fryer to your door.",
+
+    menuEyebrow: "The Menu",
+    menuTitle: "Everything's Fired Up",
+    menuSub: "Every category, every box. Prices in Egyptian Pounds (L.E).",
+
+    filterAll: "All",
+    filterSmash: "Smash",
+    filterChicken: "Chicken Sandwiches",
+    filterRolls: "Rolls",
+    filterDuck: "Duck Meals",
+    filterTrays: "Trays",
+    filterStrips: "Strips Meals",
+    filterSides: "Side Items",
+    filterExtras: "Extras",
+    filterDrinks: "Drinks",
+    filterSauces: "Sauces",
+    filterLimited: "Limited Edition",
+
+    limitedEyebrow: "Limited Edition",
+    limitedTitle: "The Big Leagues",
+    limitedSub: "Our largest, most loaded builds — while supplies last.",
+    limitedTag: "While supplies last",
+    limitedBadge: "Limited",
+    limitedEmpty:
+      "Nothing here yet — new limited drops are on the way. Check back soon.",
+
+    limitedOffersEyebrow: "Limited Offers",
+    limitedOffersTitle: "Deals Worth Firing Up For",
+    limitedOffersSub: "Our current offers, all in one place.",
+    limitedOffersEmpty:
+      "No offers running right now — check back soon for our next deal.",
+
+    reviewsEyebrow: "Customer Reviews",
+    reviewsTitle: "Word on the Street",
+    review1Text:
+      '"The Dr Smash is unreal — crispy edges, melted cheese, perfect sauce ratio. Best smash burger in Minya, easily."',
+    review1Name: "— Ahmed K.",
+    review2Text:
+      '"Ordered the Family Box for a get-together — everyone went quiet the second the box opened. Insanely crispy."',
+    review2Name: "— Mariam S.",
+    review3Text:
+      '"Fast delivery, still hot, still crunchy. The Solo Nash lives up to the name — bring napkins."',
+    review3Name: "— Youssef M.",
+
+    contactEyebrow: "Get In Touch",
+    contactTitle: "Come Get Some",
+    contactAddressLabel: "Address",
+    contactAddressValue:
+      "Mallawi, Minya — Atef Barakat St, in front of El-Horreya School, above Al-Kahf Café",
+    contactPhoneLabel: "Phone",
+    contactWhatsappLabel: "WhatsApp",
+    contactHoursLabel: "Opening Hours",
+    contactHoursValue: "Daily — 1:00 PM to 2:00 AM",
+    contactCallNow: "Call Now",
+    contactWhatsappUs: "WhatsApp Us",
+    contactMapText: "Google Maps — Mallawi, Minya",
+    contactMapBtn: "Open in Google Maps",
+
+    footerTagline: "Nashville Hot Fried Chicken & Smash Burgers.",
+    footerQuickLinks: "Quick Links",
+    footerAboutUs: "About Us",
+    footerContactHeading: "Contact",
+    footerMallawi: "Mallawi, Minya",
+    footerRights: "All Rights Reserved.",
+    footerDesignedBy: "Designed & Developed by",
+
+    cartTitle: "Your Cart",
+    cartPhoneLabel: "Phone Number",
+    cartPhonePlaceholder: "01xxxxxxxxx",
+    cartAddressLabel: "Delivery Address",
+    cartAddressPlaceholder: "Street, area, landmark...",
+    cartTotalLabel: "Total",
+    cartEmptyBtn: "Empty Cart",
+    cartCheckoutBtn: "Checkout on WhatsApp",
+    cartEmptyMsg: "Your cart is empty.<br>Add something fired up!",
+
+    labelStyle: "Style",
+    labelSize: "Size",
+    labelSauce: "Choose your sauce",
+    doubleSinglePricing: "Double / Single pricing shown.",
+    addToCart: "Add to Cart",
+    added: "Added",
+    addedToCart: "added to cart",
+
+    waGreeting: "Hi Dr. Nashville, I'd like to order:",
+    waTotal: "Total",
+    waPhone: "Phone",
+    waAddress: "Address",
+  },
+  ar: {
+    navHome: "الرئيسية",
+    navAbout: "من نحن",
+    navMenu: "المنيو",
+    navLimited: "الإصدار المحدود",
+    navLimitedOffers: "عروض محدودة",
+    navReviews: "آراء العملاء",
+    navContact: "تواصل معنا",
+
+    heroEyebrow: "ملوي · المنيا",
+    heroSlogan:
+      "دجاج ناشفيل الحار وسماش برجر — نار على نار، محملة لآخرها، من غير أي اختصارات.",
+    heroCtaMenu: "شوف المنيو",
+    heroCtaWhatsapp: "اطلب على واتساب",
+    heroScroll: "انزل تحت",
+
+    aboutEst: "تأسست",
+    aboutMallawi: "ملوي",
+    aboutEyebrow: "حكايتنا",
+    aboutTitle: "دجاج ياخد حقه من النار.",
+    aboutText1:
+      "دكتور ناشفيل بدأت بفكرة واحدة: دجاج ناشفيل الحار الأصلي مكانش موجود بشكل صح في ملوي — فقررنا نعمله إحنا. كل قطعة بتتنقع، بتتبن بإيدينا، وبتتقلى أول ما تتطلب، وبتوصلك زي ما لازم تكون: مقرمشة وحارة ومحملة بالطعم.",
+    aboutText2:
+      "وجنب الدجاج، سماش بار بتاعنا بياخد نفس الهوس في اللحمة — قطع سماش رفيعة اتحمرت كويس ومحملة بالجبنة الذايبة وصوصات البيت. من غير فريزرات مليانة اختصارات. بس نار، ودهن، وخبرة.",
+    whyCard1Title: "بتتحضر أول ما تتطلب",
+    whyCard1Desc: "من غير ما تقعد تحت لمبة تسخين.",
+    whyCard2Title: "مكونات حقيقية",
+    whyCard2Desc: "تتبيلة طازة وخلطات بهارات حقيقية.",
+    whyCard3Title: "توصيل سريع",
+    whyCard3Desc: "من الفرن على طول لحد باب بيتك.",
+
+    menuEyebrow: "المنيو",
+    menuTitle: "كل حاجة نار",
+    menuSub: "كل الأصناف، كل البوكسات. الأسعار بالجنيه المصري (ج.م).",
+
+    filterAll: "الكل",
+    filterSmash: "سماش",
+    filterChicken: "ساندوتشات دجاج",
+    filterRolls: "رولز",
+    filterDuck: "دوك ميل",
+    filterTrays: "الصواني",
+    filterStrips: "استربس ميل",
+    filterSides: "أطباق جانبية",
+    filterExtras: "إضافات",
+    filterDrinks: "مشروبات",
+    filterSauces: "صوص",
+    filterLimited: "الإصدار المحدود",
+
+    limitedEyebrow: "الإصدار المحدود",
+    limitedTitle: "أبطال القوايم الكبيرة",
+    limitedSub: "أضخم وأكتر أصنافنا تحميلاً — لحد ما تخلص الكمية.",
+    limitedTag: "لحد ما تخلص الكمية",
+    limitedBadge: "محدود",
+    limitedEmpty: "لسه مفيش حاجة هنا — أصناف محدودة جديدة جاية قريب. تابعنا.",
+
+    limitedOffersEyebrow: "عروض محدودة",
+    limitedOffersTitle: "عروض تستاهل تشعل النار",
+    limitedOffersSub: "كل عروضنا الحالية في مكان واحد.",
+    limitedOffersEmpty: "مفيش عروض شغالة دلوقتي — تابعنا قريب لعرضنا الجاي.",
+
+    reviewsEyebrow: "آراء العملاء",
+    reviewsTitle: "اللي الناس بتقوله",
+    review1Text:
+      "«الدكتور سماش حاجة تانية — أطراف مقرمشة، جبنة ذايبة، نسبة صوص مظبوطة. أحسن سماش برجر في المنيا من غير منافس.»",
+    review1Name: "— أحمد ك.",
+    review2Text:
+      "«طلبت فاميلي بوكس لتجمع أصحاب — الكل سكت أول ما البوكس اتفتح. مقرمشة بجنون.»",
+    review2Name: "— مريم س.",
+    review3Text:
+      "«توصيل سريع، والأكل وصل سخن ومقرمش زي ما هو. سولو ناش فعلاً بيثبت اسمه — جيب مناديل معاك.»",
+    review3Name: "— يوسف م.",
+
+    contactEyebrow: "تواصل معنا",
+    contactTitle: "تعالى خد لك حاجة",
+    contactAddressLabel: "العنوان",
+    contactAddressValue:
+      "ملوي، المنيا — شارع عاطف بركات، أمام مدرسة الحرية، فوق كافيه الكهف",
+    contactPhoneLabel: "التليفون",
+    contactWhatsappLabel: "واتساب",
+    contactHoursLabel: "مواعيد العمل",
+    contactHoursValue: "يومياً — من ١ الضهر لحد ٢ بعد نص الليل",
+    contactCallNow: "اتصل بينا",
+    contactWhatsappUs: "راسلنا واتساب",
+    contactMapText: "خرايط جوجل — ملوي، المنيا",
+    contactMapBtn: "افتح في خرايط جوجل",
+
+    footerTagline: "دجاج ناشفيل الحار وسماش برجر.",
+    footerQuickLinks: "روابط سريعة",
+    footerAboutUs: "من نحن",
+    footerContactHeading: "تواصل",
+    footerMallawi: "ملوي، المنيا",
+    footerRights: "جميع الحقوق محفوظة.",
+    footerDesignedBy: "تصميم وتطوير",
+
+    cartTitle: "سلة الطلبات",
+    cartPhoneLabel: "رقم التليفون",
+    cartPhonePlaceholder: "٠١xxxxxxxxx",
+    cartAddressLabel: "عنوان التوصيل",
+    cartAddressPlaceholder: "الشارع، المنطقة، أقرب علامة مميزة...",
+    cartTotalLabel: "الإجمالي",
+    cartEmptyBtn: "افرغ السلة",
+    cartCheckoutBtn: "أكمل الطلب على واتساب",
+    cartEmptyMsg: "سلتك فاضية.<br>ضيف حاجة نار!",
+
+    labelStyle: "الدرجة",
+    labelSize: "الحجم",
+    labelSauce: "اختار الصوص",
+    doubleSinglePricing: "الأسعار موضحة للدبل والسنجل.",
+    addToCart: "أضف للسلة",
+    added: "تمت الإضافة",
+    addedToCart: "اتضافت للسلة",
+
+    waGreeting: "أهلاً دكتور ناشفيل، عايز أطلب:",
+    waTotal: "الإجمالي",
+    waPhone: "التليفون",
+    waAddress: "العنوان",
+  },
+};
+
+/* Translation for the shared Style/Sauce option values, since the
+   underlying stored value stays in English for data consistency but
+   the label shown to the person switches with the language. */
+const OPTION_LABEL_AR = {
+  Classic: "كلاسيك",
+  Spicy: "حار",
+  Nashville: "ناشفيل",
+  Cheddar: "تشيدر",
+  Texas: "تكساس",
+  BBQ: "باربكيو",
+  Boston: "بوسطن",
+  Ranch: "رانش",
+  "Sweet Chili": "سويت شيلي",
+  "Honey Mustard": "عسل وخردل",
+  Tiger: "تايجر",
+};
+
+let currentLang = localStorage.getItem("drNashvilleLang") || "en";
+
+function t(key) {
+  return (
+    (TRANSLATIONS[currentLang] && TRANSLATIONS[currentLang][key]) ||
+    TRANSLATIONS.en[key] ||
+    key
+  );
+}
+
+function optionLabel(value) {
+  if (currentLang === "ar" && OPTION_LABEL_AR[value])
+    return OPTION_LABEL_AR[value];
+  return value;
+}
+
+function sizeLabel(size) {
+  if (!size) return null;
+  if (currentLang === "ar") return size === "double" ? "دبل" : "سنجل";
+  return size === "double" ? "Double" : "Single";
+}
+
+function currencyLabel() {
+  return currentLang === "ar" ? "ج.م" : "L.E";
+}
+
+function itemName(item) {
+  return currentLang === "ar" ? item.nameAr : item.nameEn;
+}
+
+function itemSecondaryName(item) {
+  return currentLang === "ar" ? item.nameEn : item.nameAr;
+}
+
+function itemDesc(item) {
+  if (currentLang === "ar") return item.descAr || item.desc || "";
+  return item.desc || "";
+}
+
+function applyLanguage(lang) {
+  currentLang = lang;
+  localStorage.setItem("drNashvilleLang", lang);
+
+  document.documentElement.setAttribute("lang", lang);
+  document.documentElement.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
+  document.body.classList.toggle("lang-ar", lang === "ar");
+
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
+    const key = el.getAttribute("data-i18n");
+    el.innerHTML = t(key);
+  });
+  document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+    const key = el.getAttribute("data-i18n-placeholder");
+    el.setAttribute("placeholder", t(key));
+  });
+
+  const toggleLabel = document.getElementById("langToggleLabel");
+  if (toggleLabel)
+    toggleLabel.textContent = lang === "ar" ? "English" : "العربية";
+
+  // Re-render everything that's built dynamically in JS so it picks up the new language
+  renderMenu();
+  renderLimited();
+  renderCart();
+}
+
+document.getElementById("langToggle")?.addEventListener("click", () => {
+  applyLanguage(currentLang === "ar" ? "en" : "ar");
+});
+
+/* Limited Edition — Crep and Casadia, shown with the real photos you sent. */
 const LIMITED_IDS = ["le2", "le1"];
 const LIMITED_IMAGES = { le1: "crepnaz.jpg", le2: "casadia.jpg" };
 
@@ -745,14 +1175,10 @@ function addToCart(id, size, flavor) {
     cart[key] = { id, size: size || null, flavor: flavor || null, qty: 1 };
   }
   saveCart();
-  const label = [
-    item.nameEn,
-    flavor,
-    size ? (size === "double" ? "Double" : "Single") : null,
-  ]
+  const label = [itemName(item), optionLabel(flavor), sizeLabel(size)]
     .filter(Boolean)
     .join(" · ");
-  showToast(`${label} added to cart`);
+  showToast(`${label} ${t("addedToCart")}`);
 }
 
 function changeQty(key, delta) {
@@ -788,26 +1214,23 @@ function renderCart() {
   const container = document.getElementById("cartItems");
   const entries = Object.entries(cart);
   if (entries.length === 0) {
-    container.innerHTML = `<div class="cart-empty"><i class="bi bi-bag-x"></i><p>Your cart is empty.<br>Add something fired up!</p></div>`;
+    container.innerHTML = `<div class="cart-empty"><i class="bi bi-bag-x"></i><p>${t("cartEmptyMsg")}</p></div>`;
   } else {
     container.innerHTML = entries
       .map(([key, entry]) => {
         const item = MENU.find((m) => m.id === entry.id);
         if (!item) return "";
         const price = unitPrice(item, entry.size);
-        const variantLabel = [
-          entry.flavor,
-          entry.size ? (entry.size === "double" ? "Double" : "Single") : null,
-        ]
+        const variantLabel = [optionLabel(entry.flavor), sizeLabel(entry.size)]
           .filter(Boolean)
           .join(" · ");
         return `
         <div class="cart-item">
           <div class="cart-item-thumb"><i class="bi ${CAT_ICONS[item.cat] || "bi-basket-fill"}"></i></div>
           <div class="cart-item-info">
-            <h6>${item.nameEn}</h6>
+            <h6>${itemName(item)}</h6>
             ${variantLabel ? `<span class="cart-item-variant">${variantLabel}</span>` : ""}
-            <span class="cart-item-price">${price} L.E</span>
+            <span class="cart-item-price">${price} ${currencyLabel()}</span>
             <div class="qty-control mt-1">
               <button onclick="changeQty('${key}',-1)" aria-label="Decrease quantity"><i class="bi bi-dash"></i></button>
               <span>${entry.qty}</span>
@@ -819,25 +1242,31 @@ function renderCart() {
       })
       .join("");
   }
-  document.getElementById("cartTotal").textContent = `${cartTotal()} L.E`;
+  document.getElementById("cartTotal").textContent =
+    `${cartTotal()} ${currencyLabel()}`;
 
-  // Build a WhatsApp order summary
+  // Build a WhatsApp order summary — items, then phone, then address, then total last
   const wa = document.getElementById("checkoutBtn");
   if (entries.length) {
-    let msg = "Hi Dr. Nashville, I'd like to order:%0A";
+    let msg = `${t("waGreeting")}%0A`;
     entries.forEach(([key, entry]) => {
       const item = MENU.find((m) => m.id === entry.id);
       if (!item) return;
       const price = unitPrice(item, entry.size);
-      const variantLabel = [
-        entry.flavor,
-        entry.size ? (entry.size === "double" ? "Double" : "Single") : null,
-      ]
+      const variantLabel = [optionLabel(entry.flavor), sizeLabel(entry.size)]
         .filter(Boolean)
         .join(", ");
-      msg += `- ${item.nameEn}${variantLabel ? ` (${variantLabel})` : ""} x${entry.qty} (${price * entry.qty} L.E)%0A`;
+      msg += `- ${itemName(item)}${variantLabel ? ` (${variantLabel})` : ""} x${entry.qty} (${price * entry.qty} ${currencyLabel()})%0A`;
     });
-    msg += `Total: ${cartTotal()} L.E`;
+    const phone = (
+      document.getElementById("customerPhone")?.value || ""
+    ).trim();
+    const address = (
+      document.getElementById("customerAddress")?.value || ""
+    ).trim();
+    msg += `${t("waPhone")}: ${phone || "-"}%0A`;
+    msg += `${t("waAddress")}: ${address || "-"}%0A`;
+    msg += `${t("waTotal")}: ${cartTotal()} ${currencyLabel()}`;
     wa.href = `https://wa.me/201031219787?text=${msg}`;
   } else {
     wa.href = "https://wa.me/201031219787";
@@ -847,10 +1276,17 @@ function renderCart() {
 /* ---------- RENDER MENU ---------- */
 function menuCardHTML(item, imgUrl) {
   const priceHTML = item.priceSingle
-    ? `<span class="menu-card-price">${item.price} / ${item.priceSingle} L.E</span>`
-    : `<span class="menu-card-price">${item.price} L.E</span>`;
+    ? `<span class="menu-card-price">${item.price} / ${item.priceSingle} ${currencyLabel()}</span>`
+    : `<span class="menu-card-price">${item.price} ${currencyLabel()}</span>`;
 
-  const STYLE_CATEGORIES = ["chicken", "rolls", "duck", "trays", "strips", "limited"];
+  const STYLE_CATEGORIES = [
+    "chicken",
+    "rolls",
+    "duck",
+    "trays",
+    "strips",
+    "limited",
+  ];
   const showStyleChoice = STYLE_CATEGORIES.includes(item.cat);
   const hasSauceChoice = !!item.sauceOptions;
 
@@ -862,18 +1298,18 @@ function menuCardHTML(item, imgUrl) {
         item.priceSingle
           ? `
       <div class="variant-group">
-        <label>Size</label>
+        <label>${t("labelSize")}</label>
         <select class="variant-size">
-          <option value="double">Double (${item.price} L.E)</option>
-          <option value="single">Single (${item.priceSingle} L.E)</option>
+          <option value="double">${sizeLabel("double")} (${item.price} ${currencyLabel()})</option>
+          <option value="single">${sizeLabel("single")} (${item.priceSingle} ${currencyLabel()})</option>
         </select>
       </div>`
           : ""
       }
       <div class="variant-group">
-        <label>Style</label>
+        <label>${t("labelStyle")}</label>
         <select class="variant-flavor">
-          ${FLAVORS.map((f) => `<option value="${f}">${f}</option>`).join("")}
+          ${FLAVORS.map((f) => `<option value="${f}">${optionLabel(f)}</option>`).join("")}
         </select>
       </div>
     </div>`;
@@ -881,9 +1317,9 @@ function menuCardHTML(item, imgUrl) {
     variantHTML = `
     <div class="variant-row">
       <div class="variant-group variant-group-full">
-        <label>Choose your sauce</label>
+        <label>${t("labelSauce")}</label>
         <select class="variant-flavor">
-          ${item.sauceOptions.map((s) => `<option value="${s}">${s}</option>`).join("")}
+          ${item.sauceOptions.map((s) => `<option value="${s}">${optionLabel(s)}</option>`).join("")}
         </select>
       </div>
     </div>`;
@@ -905,15 +1341,15 @@ function menuCardHTML(item, imgUrl) {
         <div class="menu-card-body">
           <div class="menu-card-top">
             <div>
-              <div class="menu-card-name">${item.nameEn}</div>
-              <div class="menu-card-name-ar ar">${item.nameAr}</div>
+              <div class="menu-card-name">${itemName(item)}</div>
+              <div class="menu-card-name-ar ar">${itemSecondaryName(item)}</div>
             </div>
             ${priceHTML}
           </div>
-          <p class="menu-card-desc">${item.desc || ""}${item.priceSingle ? "<br><strong>Double / Single</strong> pricing shown." : ""}</p>
+          <p class="menu-card-desc">${itemDesc(item)}${item.priceSingle ? `<br><strong>${t("doubleSinglePricing")}</strong>` : ""}</p>
           ${variantHTML}
           <button class="menu-add-btn" onclick="handleAddClick(this,'${item.id}')">
-            <i class="bi bi-bag-plus"></i> Add to Cart
+            <i class="bi bi-bag-plus"></i> ${t("addToCart")}
           </button>
         </div>
       </div>
@@ -929,10 +1365,11 @@ function handleAddClick(btn, id) {
 
   addToCart(id, size, flavor);
   btn.classList.add("added");
-  btn.innerHTML = `<i class="bi bi-check2"></i> Added`;
+  const addToCartHTML = `<i class="bi bi-bag-plus"></i> ${t("addToCart")}`;
+  btn.innerHTML = `<i class="bi bi-check2"></i> ${t("added")}`;
   setTimeout(() => {
     btn.classList.remove("added");
-    btn.innerHTML = `<i class="bi bi-bag-plus"></i> Add to Cart`;
+    btn.innerHTML = addToCartHTML;
   }, 1200);
 }
 
@@ -958,7 +1395,7 @@ function renderLimited() {
       <div class="col-12">
         <div class="limited-empty reveal">
           <i class="bi bi-hourglass-split"></i>
-          <p>Nothing here yet — new limited drops are on the way. Check back soon.</p>
+          <p>${t("limitedEmpty")}</p>
         </div>
       </div>`;
     observeReveals();
@@ -971,7 +1408,7 @@ function renderLimited() {
     return `
       <div class="col-md-6 col-lg-5">
         <div class="limited-card reveal">
-          <span class="limited-badge"><i class="bi bi-star-fill"></i> Limited</span>
+          <span class="limited-badge"><i class="bi bi-star-fill"></i> ${t("limitedBadge")}</span>
           <div class="limited-img">
             ${
               imgUrl
@@ -980,24 +1417,24 @@ function renderLimited() {
             }
           </div>
           <div class="limited-body">
-            <h4>${item.nameEn}</h4>
-            <span class="ar">${item.nameAr}</span>
-            <p class="limited-desc">${item.desc || ""}</p>
+            <h4>${itemName(item)}</h4>
+            <span class="ar">${itemSecondaryName(item)}</span>
+            <p class="limited-desc">${itemDesc(item)}</p>
             <div class="variant-row">
               <div class="variant-group variant-group-full">
-                <label>Style</label>
+                <label>${t("labelStyle")}</label>
                 <select class="variant-flavor">
-                  ${FLAVORS.map((f) => `<option value="${f}">${f}</option>`).join("")}
+                  ${FLAVORS.map((f) => `<option value="${f}">${optionLabel(f)}</option>`).join("")}
                 </select>
               </div>
             </div>
             <div class="d-flex justify-content-between align-items-center mt-2">
-              <span class="limited-price">${item.price} L.E</span>
+              <span class="limited-price">${item.price} ${currencyLabel()}</span>
               <button class="btn btn-fire btn-sm" onclick="handleAddClick(this,'${item.id}')">
-                <i class="bi bi-bag-plus"></i> Add
+                <i class="bi bi-bag-plus"></i> ${t("addToCart")}
               </button>
             </div>
-            <p class="limited-tag mt-2 mb-0">While supplies last</p>
+            <p class="limited-tag mt-2 mb-0">${t("limitedTag")}</p>
           </div>
         </div>
       </div>`;
@@ -1129,12 +1566,15 @@ function spawnEmbers() {
 /* ---------- EMPTY CART BUTTON ---------- */
 document.getElementById("emptyCartBtn").addEventListener("click", emptyCart);
 
+/* ---------- LIVE UPDATE WHATSAPP LINK ON CONTACT INFO CHANGE ---------- */
+["customerPhone", "customerAddress"].forEach((id) => {
+  document.getElementById(id).addEventListener("input", renderCart);
+});
+
 /* ---------- INIT ---------- */
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("year").textContent = new Date().getFullYear();
-  renderMenu();
-  renderLimited();
-  renderCart();
+  applyLanguage(currentLang); // also renders menu, limited edition, and cart
   updateCartCount();
   spawnEmbers();
   observeReveals();
