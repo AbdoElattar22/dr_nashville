@@ -670,7 +670,7 @@ const MENU = [
     id: "le1",
     cat: "limited",
     nameEn: "Crep",
-    nameAr: "كريب ناز",
+    nameAr: "كريب ",
     price: 100,
     desc: "Toasted folded flatbread stuffed with chicken, melted cheese, fries and house sauces — pick your heat.",
     descAr:
