@@ -742,6 +742,7 @@ const TRANSLATIONS = {
     filterDrinks: "Drinks",
     filterSauces: "Sauces",
     filterLimited: "Limited Edition",
+    filterOffers: "Offers" /* NEW ADDITION */,
 
     limitedEyebrow: "Limited Edition",
     limitedTitle: "The Big Leagues",
@@ -756,6 +757,11 @@ const TRANSLATIONS = {
     limitedOffersSub: "Our current offers, all in one place.",
     limitedOffersEmpty:
       "No offers running right now — check back soon for our next deal.",
+    /* ===== NEW ADDITION: offer card labels ===== */
+    offerBadge: "Offer",
+    offerWas: "was",
+    offerOrderBtn: "Order This Offer",
+    /* ===== END NEW ADDITION ===== */
 
     reviewsEyebrow: "Customer Reviews",
     reviewsTitle: "Word on the Street",
@@ -861,6 +867,7 @@ const TRANSLATIONS = {
     filterDrinks: "مشروبات",
     filterSauces: "صوص",
     filterLimited: "الإصدار المحدود",
+    filterOffers: "عروض" /* NEW ADDITION */,
 
     limitedEyebrow: "الإصدار المحدود",
     limitedTitle: "أبطال القوايم الكبيرة",
@@ -873,6 +880,11 @@ const TRANSLATIONS = {
     limitedOffersTitle: "عروض تستاهل تشعل النار",
     limitedOffersSub: "كل عروضنا الحالية في مكان واحد.",
     limitedOffersEmpty: "مفيش عروض شغالة دلوقتي — تابعنا قريب لعرضنا الجاي.",
+    /* ===== NEW ADDITION: offer card labels ===== */
+    offerBadge: "عرض",
+    offerWas: "بدل",
+    offerOrderBtn: "اطلب العرض ده",
+    /* ===== END NEW ADDITION ===== */
 
     reviewsEyebrow: "آراء العملاء",
     reviewsTitle: "اللي الناس بتقوله",
@@ -1013,6 +1025,7 @@ function applyLanguage(lang) {
   // Re-render everything that's built dynamically in JS so it picks up the new language
   renderMenu();
   renderLimited();
+  renderLimitedOffers(); // NEW ADDITION: keep offer cards in sync with language toggle
   renderCart();
 }
 
@@ -1023,6 +1036,49 @@ document.getElementById("langToggle")?.addEventListener("click", () => {
 /* Limited Edition — Crep and Casadia, shown with the real photos you sent. */
 const LIMITED_IDS = ["le2", "le1"];
 const LIMITED_IMAGES = { le1: "crepnaz.jpg", le2: "casadia.jpg" };
+
+/* ============================================================
+   ============ NEW ADDITION — LIMITED OFFERS DATA ============
+   Added on request: 3 bundle deals shown in the "Limited Offers"
+   section (id="limitedOffersGrid"), each bilingual (EN/AR) with
+   its own real photo. These are promo bundles, not individual
+   MENU items, so they live in their own array and are ordered
+   via a prefilled WhatsApp message rather than the cart.
+   Nothing above or below this block was changed for this feature.
+   ============================================================ */
+const LIMITED_OFFERS = [
+  {
+    id: "off1",
+    nameEn: "Family Broasted Deal",
+    nameAr: "عرض عيلة بروستد",
+    descEn: "6 Broasted pieces, 2 Rizo, 2 Coleslaw, 4 Bread, Fries + Ketchup.",
+    descAr: "٦ قطع بروستد، ٢ ريزو، ٢ كولسلو، ٤ عيش، فرايز + كاتشب.",
+    price: 250,
+    oldPrice: 300,
+    image: "offer-broasted.jpg",
+  },
+  {
+    id: "off2",
+    nameEn: "Any 2 Double Sandwiches",
+    nameAr: "أي ٢ ساندوتشين دابل",
+    descEn: "Pick any two double sandwiches from our menu.",
+    descAr: "اختار أي ساندوتشين دابل من المنيو.",
+    price: 300,
+    oldPrice: null,
+    image: "offer-double-sandwich.jpg",
+  },
+  {
+    id: "off3",
+    nameEn: "Dala3 Tray Deal",
+    nameAr: "عرض صنية الدلع",
+    descEn: "Our Dala3 Tray, now at a special offer price.",
+    descAr: "صنية الدلع بتاعتنا، دلوقتي بسعر عرض خاص.",
+    price: 330,
+    oldPrice: 400,
+    image: "dala3.png",
+  },
+];
+/* =================== END OF NEW ADDITION =================== */
 
 const CAT_ICONS = {
   smash: "bi-fire",
@@ -1377,7 +1433,7 @@ function renderMenu() {
   const grid = document.getElementById("menuGrid");
   const counters = {};
   const items = MENU;
-  grid.innerHTML = items
+  const regularCards = items
     .map((item) => {
       const idx = counters[item.cat] || 0;
       counters[item.cat] = idx + 1;
@@ -1385,6 +1441,20 @@ function renderMenu() {
       return menuCardHTML(item, imgUrl);
     })
     .join("");
+
+  /* ============================================================
+     NEW ADDITION: append the 3 Limited Offers bundle-deal cards
+     into the main Menu grid too, so they show up when browsing
+     and are filterable via the new "Offers" button. They still
+     use the WhatsApp-message ordering flow (not the cart), same
+     as in the dedicated Limited Offers section further down.
+     ============================================================ */
+  const offerCards = LIMITED_OFFERS.map((offer) =>
+    offerCardHTML(offer, "col-md-6 col-lg-4 menu-item"),
+  ).join("");
+  /* =================== END OF NEW ADDITION =================== */
+
+  grid.innerHTML = regularCards + offerCards;
   observeReveals();
 }
 
@@ -1441,6 +1511,83 @@ function renderLimited() {
   }).join("");
   observeReveals();
 }
+
+/* ============================================================
+   ============ NEW ADDITION — RENDER LIMITED OFFERS ===========
+   Renders the 3 bundle-deal cards into #limitedOffersGrid.
+   Fully bilingual (uses currentLang like the rest of the site)
+   and includes each offer's real photo. Ordering happens via a
+   prefilled WhatsApp message instead of the cart, since these
+   are bundle deals rather than individual MENU items.
+   ============================================================ */
+/* ============================================================
+   ============ NEW ADDITION — SHARED OFFER CARD HTML ==========
+   Builds one offer card's markup. Used in two places: the main
+   Menu grid (via renderMenu, wrapped so it's filterable) and the
+   dedicated Limited Offers section (via renderLimitedOffers).
+   colClass lets each caller size the column to match its grid.
+   ============================================================ */
+function offerCardHTML(offer, colClass) {
+  const name = currentLang === "ar" ? offer.nameAr : offer.nameEn;
+  const secondaryName = currentLang === "ar" ? offer.nameEn : offer.nameAr;
+  const desc = currentLang === "ar" ? offer.descAr : offer.descEn;
+  const waMsg =
+    currentLang === "ar"
+      ? `أهلاً دكتور ناشفيل، عايز أطلب عرض: ${offer.nameAr} (${offer.price} ج.م)`
+      : `Hi Dr. Nashville, I'd like to order the offer: ${offer.nameEn} (${offer.price} L.E)`;
+
+  return `
+    <div class="${colClass}" data-cat="offers">
+      <div class="limited-card reveal">
+        <span class="limited-badge"><i class="bi bi-star-fill"></i> ${t("offerBadge")}</span>
+        <div class="limited-img">
+          <img src="${offer.image}" alt="${offer.nameEn}" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div class="limited-body">
+          <h4>${name}</h4>
+          <span class="ar">${secondaryName}</span>
+          <p class="limited-desc">${desc}</p>
+          <div class="d-flex justify-content-between align-items-center mt-2">
+            <span class="limited-price">
+              ${offer.price} ${currencyLabel()}
+              ${
+                offer.oldPrice
+                  ? `<span class="limited-old-price">${t("offerWas")} ${offer.oldPrice} ${currencyLabel()}</span>`
+                  : ""
+              }
+            </span>
+            <a class="btn btn-fire btn-sm" href="https://wa.me/201031219787?text=${waMsg}" target="_blank" rel="noopener">
+              <i class="bi bi-whatsapp"></i> ${t("offerOrderBtn")}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>`;
+}
+/* =================== END OF NEW ADDITION =================== */
+
+function renderLimitedOffers() {
+  const grid = document.getElementById("limitedOffersGrid");
+  if (!grid) return;
+
+  if (LIMITED_OFFERS.length === 0) {
+    grid.innerHTML = `
+      <div class="col-12">
+        <div class="limited-empty reveal">
+          <i class="bi bi-hourglass-split"></i>
+          <p>${t("limitedOffersEmpty")}</p>
+        </div>
+      </div>`;
+    observeReveals();
+    return;
+  }
+
+  grid.innerHTML = LIMITED_OFFERS.map((offer) =>
+    offerCardHTML(offer, "col-md-6 col-lg-4"),
+  ).join("");
+  observeReveals();
+}
+/* =================== END OF NEW ADDITION =================== */
 
 /* ---------- FILTERS ---------- */
 document.getElementById("menuFilters").addEventListener("click", (e) => {

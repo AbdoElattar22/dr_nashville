@@ -384,6 +384,18 @@ a{ text-decoration:none; color:inherit; }
 .limited-desc{ color:var(--muted); font-size:0.85rem; line-height:1.6; margin:10px 0; }
 .limited-price{ color:var(--gold); font-family:'Anton',sans-serif; font-size:1.4rem; }
 .limited-tag{ color:var(--muted); font-size:0.78rem; }
+
+/* ============================================================
+   ============ NEW ADDITION — OFFER OLD PRICE STYLE ===========
+   Small strikethrough "was" price shown next to the offer price
+   in Limited Offers cards. Nothing else in this file was changed.
+   ============================================================ */
+.limited-old-price{
+  display:inline-block; margin-inline-start:8px;
+  color:var(--muted); font-family:'Poppins',sans-serif; font-size:0.8rem;
+  font-weight:600; text-decoration:line-through;
+}
+/* =================== END OF NEW ADDITION =================== */
 .limited-empty{
   text-align:center; padding:70px 20px; color:var(--muted);
   border:1px dashed rgba(245,237,228,0.2); border-radius:var(--radius-lg);
