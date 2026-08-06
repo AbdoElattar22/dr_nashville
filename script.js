@@ -1042,8 +1042,8 @@ const LIMITED_IMAGES = { le1: "crepnaz.jpg", le2: "casadia.jpg" };
    Added on request: 3 bundle deals shown in the "Limited Offers"
    section (id="limitedOffersGrid"), each bilingual (EN/AR) with
    its own real photo. These are promo bundles, not individual
-   MENU items, so they live in their own array and are ordered
-   via a prefilled WhatsApp message rather than the cart.
+   MENU items, so they live in their own array, but they're added
+   to the cart the same way regular menu items are.
    Nothing above or below this block was changed for this feature.
    ============================================================ */
 const LIMITED_OFFERS = [
@@ -1202,14 +1202,19 @@ const FLAVORS = ["Classic", "Spicy", "Nashville"];
    Cart entries are keyed by `${id}::${size}::${flavor}` so the same
    sandwich in different sizes/flavors are tracked as separate lines.
    Each entry: { id, size, flavor, qty } */
-let cart = JSON.parse(localStorage.getItem("drNashvilleCart") || "{}");
+let cart = {};
 
 function cartKey(id, size, flavor) {
   return `${id}::${size || "-"}::${flavor || "-"}`;
 }
 
+/* Looks up an item by id across both the regular MENU array and the
+   LIMITED_OFFERS bundle deals, so cart logic works for either. */
+function findMenuItem(id) {
+  return MENU.find((m) => m.id === id) || LIMITED_OFFERS.find((o) => o.id === id);
+}
+
 function saveCart() {
-  localStorage.setItem("drNashvilleCart", JSON.stringify(cart));
   renderCart();
   updateCartCount();
 }
@@ -1222,7 +1227,7 @@ function unitPrice(item, size) {
 }
 
 function addToCart(id, size, flavor) {
-  const item = MENU.find((m) => m.id === id);
+  const item = findMenuItem(id);
   if (!item) return;
   const key = cartKey(id, size, flavor);
   if (cart[key]) {
@@ -1256,7 +1261,7 @@ function emptyCart() {
 
 function cartTotal() {
   return Object.values(cart).reduce((sum, entry) => {
-    const item = MENU.find((m) => m.id === entry.id);
+    const item = findMenuItem(entry.id);
     return item ? sum + unitPrice(item, entry.size) * entry.qty : sum;
   }, 0);
 }
@@ -1274,7 +1279,7 @@ function renderCart() {
   } else {
     container.innerHTML = entries
       .map(([key, entry]) => {
-        const item = MENU.find((m) => m.id === entry.id);
+        const item = findMenuItem(entry.id);
         if (!item) return "";
         const price = unitPrice(item, entry.size);
         const variantLabel = [optionLabel(entry.flavor), sizeLabel(entry.size)]
@@ -1306,7 +1311,7 @@ function renderCart() {
   if (entries.length) {
     let msg = `${t("waGreeting")}%0A`;
     entries.forEach(([key, entry]) => {
-      const item = MENU.find((m) => m.id === entry.id);
+      const item = findMenuItem(entry.id);
       if (!item) return;
       const price = unitPrice(item, entry.size);
       const variantLabel = [optionLabel(entry.flavor), sizeLabel(entry.size)]
@@ -1472,7 +1477,7 @@ function renderLimited() {
     return;
   }
   grid.innerHTML = LIMITED_IDS.map((id) => {
-    const item = MENU.find((m) => m.id === id);
+    const item = findMenuItem(id);
     if (!item) return "";
     const imgUrl = LIMITED_IMAGES[item.id];
     return `
@@ -1516,9 +1521,8 @@ function renderLimited() {
    ============ NEW ADDITION — RENDER LIMITED OFFERS ===========
    Renders the 3 bundle-deal cards into #limitedOffersGrid.
    Fully bilingual (uses currentLang like the rest of the site)
-   and includes each offer's real photo. Ordering happens via a
-   prefilled WhatsApp message instead of the cart, since these
-   are bundle deals rather than individual MENU items.
+   and includes each offer's real photo. Ordering happens through
+   the same cart as regular MENU items.
    ============================================================ */
 /* ============================================================
    ============ NEW ADDITION — SHARED OFFER CARD HTML ==========
@@ -1531,10 +1535,6 @@ function offerCardHTML(offer, colClass) {
   const name = currentLang === "ar" ? offer.nameAr : offer.nameEn;
   const secondaryName = currentLang === "ar" ? offer.nameEn : offer.nameAr;
   const desc = currentLang === "ar" ? offer.descAr : offer.descEn;
-  const waMsg =
-    currentLang === "ar"
-      ? `أهلاً دكتور ناشفيل، عايز أطلب عرض: ${offer.nameAr} (${offer.price} ج.م)`
-      : `Hi Dr. Nashville, I'd like to order the offer: ${offer.nameEn} (${offer.price} L.E)`;
 
   return `
     <div class="${colClass}" data-cat="offers">
@@ -1556,9 +1556,9 @@ function offerCardHTML(offer, colClass) {
                   : ""
               }
             </span>
-            <a class="btn btn-fire btn-sm" href="https://wa.me/201031219787?text=${waMsg}" target="_blank" rel="noopener">
-              <i class="bi bi-whatsapp"></i> ${t("offerOrderBtn")}
-            </a>
+            <button class="menu-add-btn" onclick="handleAddClick(this,'${offer.id}')">
+              <i class="bi bi-bag-plus"></i> ${t("addToCart")}
+            </button>
           </div>
         </div>
       </div>
@@ -1712,6 +1712,13 @@ function spawnEmbers() {
 
 /* ---------- EMPTY CART BUTTON ---------- */
 document.getElementById("emptyCartBtn").addEventListener("click", emptyCart);
+
+/* ---------- CLEAR CART AFTER CHECKOUT ----------
+   Once the order is sent to WhatsApp, the cart shouldn't stick around,
+   so it's cleared right after the WhatsApp tab opens. */
+document.getElementById("checkoutBtn").addEventListener("click", () => {
+  setTimeout(emptyCart, 300);
+});
 
 /* ---------- LIVE UPDATE WHATSAPP LINK ON CONTACT INFO CHANGE ---------- */
 ["customerPhone", "customerAddress"].forEach((id) => {
