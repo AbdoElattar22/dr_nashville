@@ -522,6 +522,8 @@ a{ text-decoration:none; color:inherit; }
 }
 .cart-input::placeholder{ color:rgba(245,237,228,0.35); }
 .cart-input:focus{ outline:none; border-color:var(--fire); box-shadow:none; background:var(--surface-2); color:var(--off-white); }
+/* NEW ADDITION: keep the Notes textarea from being resized wider than the sidebar */
+textarea.cart-input{ resize:vertical; }
 .cart-summary{ border-top:1px solid var(--line); padding-top:16px; }
 .cart-empty{ text-align:center; color:var(--muted); padding:60px 10px; }
 .cart-empty i{ font-size:2.4rem; display:block; margin-bottom:10px; color:var(--fire); }

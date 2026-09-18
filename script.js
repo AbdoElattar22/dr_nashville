@@ -81,6 +81,18 @@ const MENU = [
     descAr:
       "قطعة سماش لحم، صوص حار، هالبينو مخلل، جبنة تشيدر، بطاطس مقلية، بصل مكرمل، صوص تكساس، باربكيو.",
   },
+  /* NEW ADDITION: "Smashed Smoked Boss" — smash beef + smoked beef,
+     part of the new "Boss" line. Price is an estimate — please
+     confirm the real price and I'll update it. */
+  {
+    id: "sm8",
+    cat: "smash",
+    nameEn: "Smashed Smoked Boss",
+    nameAr: "سماش سموكد بوس",
+    price: 220,
+    desc: "Smash beef, smoked beef, cheddar, Boston sauce, BBQ sauce.",
+    descAr: "سماش لحم، لحم مدخن، جبنة تشيدر، صوص بوسطن، صوص باربكيو.",
+  },
 
   // CHICKEN SANDWICHES
   {
@@ -203,6 +215,28 @@ const MENU = [
     price: 170,
     desc: "Three fillets,coleslaw, 1000island.",
     descAr: "تلات فيليه دجاج، كولسلو، صوص ١٠٠٠ آيلاند.",
+  },
+  /* NEW ADDITION: "Boss Beef Round" and "Big Boss" — new drops from
+     the "Boss" line. Both get the Classic/Spicy/Nashville style
+     selector like the rest of Chicken Sandwiches. Prices are
+     estimates — please confirm the real prices and I'll update them. */
+  {
+    id: "ch13",
+    cat: "chicken",
+    nameEn: "Boss Beef Round",
+    nameAr: "بوس بيف راوند",
+    price: 200,
+    desc: "Crispy chicken strips, smoked beef, cheddar, Boston sauce, BBQ sauce.",
+    descAr: "سترپس دجاج مقرمش، لحم مدخن، جبنة تشيدر، صوص بوسطن، صوص باربكيو.",
+  },
+  {
+    id: "ch14",
+    cat: "chicken",
+    nameEn: "Big Boss",
+    nameAr: "بيج بوس",
+    price: 180,
+    desc: "Beef fillet, crispy strips, cheddar sauce, Boss sauce, BBQ sauce.",
+    descAr: "فيليه لحم، سترپس مقرمش، صوص تشيدر، صوص بوس، صوص باربكيو.",
   },
 
   // ROLLS
@@ -688,6 +722,50 @@ const MENU = [
       "راب كاساديا مشوي محمل، شرائح دجاج، جبنة ذايبة، بطاطس مقرمشة وصوص كريمي، متزين بالأعشاب الطازة — اختار درجة الحرارة اللي تناسبك.",
     styleChoice: true,
   },
+
+  /* ============================================================
+     ============ UPDATED — LIMITED OFFERS AS MENU ITEMS =========
+     Moved here from a separate LIMITED_OFFERS array so these 3
+     bundle deals go through the exact same cart / Add to Cart /
+     WhatsApp-checkout flow as every other item (per request: "I
+     need the offers to be added to the cart like the rest of the
+     menu"). oldPrice is optional and only shows a small
+     strikethrough "was" price next to the current price. offerFlavor
+     marks these as needing the 2-way Classic/Spicy choice.
+     ============================================================ */
+  {
+    id: "off1",
+    cat: "offers",
+    nameEn: "Family Broasted Deal",
+    nameAr: "عرض عيلة بروستد",
+    price: 250,
+    oldPrice: 300,
+    desc: "6 Broasted pieces, 2 Rizo, 2 Coleslaw, 4 Bread, Fries + Ketchup.",
+    descAr: "٦ قطع بروستد، ٢ ريزو، ٢ كولسلو، ٤ عيش، فرايز + كاتشب.",
+    offerFlavor: true,
+  },
+  {
+    id: "off2",
+    cat: "offers",
+    nameEn: "Any 2 Double Sandwiches",
+    nameAr: "أي ٢ ساندوتشين دابل",
+    price: 300,
+    desc: "Pick any two double sandwiches from our menu.",
+    descAr: "اختار أي ساندوتشين دابل من المنيو.",
+    offerFlavor: true,
+  },
+  {
+    id: "off3",
+    cat: "offers",
+    nameEn: "Dala3 Tray Deal",
+    nameAr: "عرض صنية الدلع",
+    price: 330,
+    oldPrice: 400,
+    desc: "Our Dala3 Tray, now at a special offer price.",
+    descAr: "صنية الدلع بتاعتنا، دلوقتي بسعر عرض خاص.",
+    offerFlavor: true,
+  },
+  /* =================== END OF UPDATE =================== */
 ];
 
 /* Limited Edition — Crep Naz and Casadia, shown with the real photos you sent. */
@@ -760,7 +838,6 @@ const TRANSLATIONS = {
     /* ===== NEW ADDITION: offer card labels ===== */
     offerBadge: "Offer",
     offerWas: "was",
-    offerOrderBtn: "Order This Offer",
     /* ===== END NEW ADDITION ===== */
 
     reviewsEyebrow: "Customer Reviews",
@@ -802,6 +879,10 @@ const TRANSLATIONS = {
     cartPhonePlaceholder: "01xxxxxxxxx",
     cartAddressLabel: "Delivery Address",
     cartAddressPlaceholder: "Street, area, landmark...",
+    /* NEW ADDITION: Notes field */
+    cartNotesLabel: "Notes",
+    cartNotesPlaceholder: "Any adjustments or requests...",
+    waNotes: "Notes",
     cartTotalLabel: "Total",
     cartEmptyBtn: "Empty Cart",
     cartCheckoutBtn: "Checkout on WhatsApp",
@@ -883,7 +964,6 @@ const TRANSLATIONS = {
     /* ===== NEW ADDITION: offer card labels ===== */
     offerBadge: "عرض",
     offerWas: "بدل",
-    offerOrderBtn: "اطلب العرض ده",
     /* ===== END NEW ADDITION ===== */
 
     reviewsEyebrow: "آراء العملاء",
@@ -925,6 +1005,10 @@ const TRANSLATIONS = {
     cartPhonePlaceholder: "٠١xxxxxxxxx",
     cartAddressLabel: "عنوان التوصيل",
     cartAddressPlaceholder: "الشارع، المنطقة، أقرب علامة مميزة...",
+    /* NEW ADDITION: Notes field */
+    cartNotesLabel: "ملاحظات",
+    cartNotesPlaceholder: "أي تعديلات أو طلبات خاصة...",
+    waNotes: "ملاحظات",
     cartTotalLabel: "الإجمالي",
     cartEmptyBtn: "افرغ السلة",
     cartCheckoutBtn: "أكمل الطلب على واتساب",
@@ -1035,50 +1119,25 @@ document.getElementById("langToggle")?.addEventListener("click", () => {
 
 /* Limited Edition — Crep and Casadia, shown with the real photos you sent. */
 const LIMITED_IDS = ["le2", "le1"];
-const LIMITED_IMAGES = { le1: "crepnaz.jpg", le2: "casadia.jpg" };
+const LIMITED_IMAGES = {
+  le1: "crepnaz.jpg",
+  le2: "casadia.jpg",
+  /* NEW ADDITION: offer photos, keyed the same way so they reuse
+     the same image lookup used everywhere else. */
+  off1: "offer-broasted.jpg",
+  off2: "offer-double-sandwich.jpg",
+  off3: "offer-dala3.jpg",
+  /* NEW ADDITION: real photos for the 3 new "Boss" line items */
+  ch13: "boss-beef-round.jpg",
+  ch14: "big-boss.jpg",
+  sm8: "smashed-smoked-boss.jpg",
+};
 
-/* ============================================================
-   ============ NEW ADDITION — LIMITED OFFERS DATA ============
-   Added on request: 3 bundle deals shown in the "Limited Offers"
-   section (id="limitedOffersGrid"), each bilingual (EN/AR) with
-   its own real photo. These are promo bundles, not individual
-   MENU items, so they live in their own array, but they're added
-   to the cart the same way regular menu items are.
-   Nothing above or below this block was changed for this feature.
-   ============================================================ */
-const LIMITED_OFFERS = [
-  {
-    id: "off1",
-    nameEn: "Family Broasted Deal",
-    nameAr: "عرض عيلة بروستد",
-    descEn: "6 Broasted pieces, 2 Rizo, 2 Coleslaw, 4 Bread, Fries + Ketchup.",
-    descAr: "٦ قطع بروستد، ٢ ريزو، ٢ كولسلو، ٤ عيش، فرايز + كاتشب.",
-    price: 250,
-    oldPrice: 300,
-    image: "offer-broasted.jpg",
-  },
-  {
-    id: "off2",
-    nameEn: "Any 2 Double Sandwiches",
-    nameAr: "أي ٢ ساندوتشين دابل",
-    descEn: "Pick any two double sandwiches from our menu.",
-    descAr: "اختار أي ساندوتشين دابل من المنيو.",
-    price: 300,
-    oldPrice: null,
-    image: "offer-double-sandwich.jpg",
-  },
-  {
-    id: "off3",
-    nameEn: "Dala3 Tray Deal",
-    nameAr: "عرض صنية الدلع",
-    descEn: "Our Dala3 Tray, now at a special offer price.",
-    descAr: "صنية الدلع بتاعتنا، دلوقتي بسعر عرض خاص.",
-    price: 330,
-    oldPrice: 400,
-    image: "dala3.png",
-  },
-];
-/* =================== END OF NEW ADDITION =================== */
+/* NEW ADDITION: ids for the 3 bundle-deal offers, now regular MENU
+   items (cat: "offers") so Add to Cart / WhatsApp checkout works
+   exactly like the rest of the menu. Used by renderLimitedOffers()
+   to build the dedicated Limited Offers section further down. */
+const OFFER_IDS = ["off1", "off2", "off3"];
 
 const CAT_ICONS = {
   smash: "bi-fire",
@@ -1197,24 +1256,22 @@ function getItemImage(item, indexInCat) {
 }
 
 const FLAVORS = ["Classic", "Spicy", "Nashville"];
+/* NEW ADDITION: offers only get a 2-way Classic/Spicy choice, not
+   the full 3-way Style selector used elsewhere. */
+const OFFER_FLAVORS = ["Classic", "Spicy"];
 
 /* ---------- CART STATE ----------
    Cart entries are keyed by `${id}::${size}::${flavor}` so the same
    sandwich in different sizes/flavors are tracked as separate lines.
    Each entry: { id, size, flavor, qty } */
-let cart = {};
+let cart = JSON.parse(localStorage.getItem("drNashvilleCart") || "{}");
 
 function cartKey(id, size, flavor) {
   return `${id}::${size || "-"}::${flavor || "-"}`;
 }
 
-/* Looks up an item by id across both the regular MENU array and the
-   LIMITED_OFFERS bundle deals, so cart logic works for either. */
-function findMenuItem(id) {
-  return MENU.find((m) => m.id === id) || LIMITED_OFFERS.find((o) => o.id === id);
-}
-
 function saveCart() {
+  localStorage.setItem("drNashvilleCart", JSON.stringify(cart));
   renderCart();
   updateCartCount();
 }
@@ -1227,7 +1284,7 @@ function unitPrice(item, size) {
 }
 
 function addToCart(id, size, flavor) {
-  const item = findMenuItem(id);
+  const item = MENU.find((m) => m.id === id);
   if (!item) return;
   const key = cartKey(id, size, flavor);
   if (cart[key]) {
@@ -1261,7 +1318,7 @@ function emptyCart() {
 
 function cartTotal() {
   return Object.values(cart).reduce((sum, entry) => {
-    const item = findMenuItem(entry.id);
+    const item = MENU.find((m) => m.id === entry.id);
     return item ? sum + unitPrice(item, entry.size) * entry.qty : sum;
   }, 0);
 }
@@ -1279,7 +1336,7 @@ function renderCart() {
   } else {
     container.innerHTML = entries
       .map(([key, entry]) => {
-        const item = findMenuItem(entry.id);
+        const item = MENU.find((m) => m.id === entry.id);
         if (!item) return "";
         const price = unitPrice(item, entry.size);
         const variantLabel = [optionLabel(entry.flavor), sizeLabel(entry.size)]
@@ -1311,7 +1368,7 @@ function renderCart() {
   if (entries.length) {
     let msg = `${t("waGreeting")}%0A`;
     entries.forEach(([key, entry]) => {
-      const item = findMenuItem(entry.id);
+      const item = MENU.find((m) => m.id === entry.id);
       if (!item) return;
       const price = unitPrice(item, entry.size);
       const variantLabel = [optionLabel(entry.flavor), sizeLabel(entry.size)]
@@ -1325,8 +1382,13 @@ function renderCart() {
     const address = (
       document.getElementById("customerAddress")?.value || ""
     ).trim();
+    /* NEW ADDITION: Notes field, included between Address and Total */
+    const notes = (
+      document.getElementById("customerNotes")?.value || ""
+    ).trim();
     msg += `${t("waPhone")}: ${phone || "-"}%0A`;
     msg += `${t("waAddress")}: ${address || "-"}%0A`;
+    msg += `${t("waNotes")}: ${notes || "-"}%0A`;
     msg += `${t("waTotal")}: ${cartTotal()} ${currencyLabel()}`;
     wa.href = `https://wa.me/201031219787?text=${msg}`;
   } else {
@@ -1336,9 +1398,14 @@ function renderCart() {
 
 /* ---------- RENDER MENU ---------- */
 function menuCardHTML(item, imgUrl) {
+  /* NEW ADDITION: show a strikethrough "was" price when item.oldPrice
+     is set (currently only the 3 offer items use this). */
+  const oldPriceHTML = item.oldPrice
+    ? ` <span class="limited-old-price">${t("offerWas")} ${item.oldPrice} ${currencyLabel()}</span>`
+    : "";
   const priceHTML = item.priceSingle
-    ? `<span class="menu-card-price">${item.price} / ${item.priceSingle} ${currencyLabel()}</span>`
-    : `<span class="menu-card-price">${item.price} ${currencyLabel()}</span>`;
+    ? `<span class="menu-card-price">${item.price} / ${item.priceSingle} ${currencyLabel()}${oldPriceHTML}</span>`
+    : `<span class="menu-card-price">${item.price} ${currencyLabel()}${oldPriceHTML}</span>`;
 
   const STYLE_CATEGORIES = [
     "chicken",
@@ -1350,6 +1417,8 @@ function menuCardHTML(item, imgUrl) {
   ];
   const showStyleChoice = STYLE_CATEGORIES.includes(item.cat);
   const hasSauceChoice = !!item.sauceOptions;
+  /* NEW ADDITION: offers get their own 2-way Classic/Spicy selector. */
+  const hasOfferFlavor = !!item.offerFlavor;
 
   let variantHTML = "";
   if (showStyleChoice) {
@@ -1381,6 +1450,17 @@ function menuCardHTML(item, imgUrl) {
         <label>${t("labelSauce")}</label>
         <select class="variant-flavor">
           ${item.sauceOptions.map((s) => `<option value="${s}">${optionLabel(s)}</option>`).join("")}
+        </select>
+      </div>
+    </div>`;
+  } else if (hasOfferFlavor) {
+    /* NEW ADDITION: 2-option Classic/Spicy selector for offers */
+    variantHTML = `
+    <div class="variant-row">
+      <div class="variant-group variant-group-full">
+        <label>${t("labelStyle")}</label>
+        <select class="variant-flavor">
+          ${OFFER_FLAVORS.map((f) => `<option value="${f}">${optionLabel(f)}</option>`).join("")}
         </select>
       </div>
     </div>`;
@@ -1438,7 +1518,10 @@ function renderMenu() {
   const grid = document.getElementById("menuGrid");
   const counters = {};
   const items = MENU;
-  const regularCards = items
+  /* UPDATED: offers (cat "offers") now flow through this same loop
+     automatically since they're regular MENU entries — no
+     special-casing needed here anymore. */
+  grid.innerHTML = items
     .map((item) => {
       const idx = counters[item.cat] || 0;
       counters[item.cat] = idx + 1;
@@ -1446,20 +1529,6 @@ function renderMenu() {
       return menuCardHTML(item, imgUrl);
     })
     .join("");
-
-  /* ============================================================
-     NEW ADDITION: append the 3 Limited Offers bundle-deal cards
-     into the main Menu grid too, so they show up when browsing
-     and are filterable via the new "Offers" button. They still
-     use the WhatsApp-message ordering flow (not the cart), same
-     as in the dedicated Limited Offers section further down.
-     ============================================================ */
-  const offerCards = LIMITED_OFFERS.map((offer) =>
-    offerCardHTML(offer, "col-md-6 col-lg-4 menu-item"),
-  ).join("");
-  /* =================== END OF NEW ADDITION =================== */
-
-  grid.innerHTML = regularCards + offerCards;
   observeReveals();
 }
 
@@ -1477,7 +1546,7 @@ function renderLimited() {
     return;
   }
   grid.innerHTML = LIMITED_IDS.map((id) => {
-    const item = findMenuItem(id);
+    const item = MENU.find((m) => m.id === id);
     if (!item) return "";
     const imgUrl = LIMITED_IMAGES[item.id];
     return `
@@ -1518,59 +1587,19 @@ function renderLimited() {
 }
 
 /* ============================================================
-   ============ NEW ADDITION — RENDER LIMITED OFFERS ===========
-   Renders the 3 bundle-deal cards into #limitedOffersGrid.
-   Fully bilingual (uses currentLang like the rest of the site)
-   and includes each offer's real photo. Ordering happens through
-   the same cart as regular MENU items.
+   ============ UPDATED — RENDER LIMITED OFFERS =================
+   Renders the dedicated Limited Offers section (#limitedOffersGrid).
+   Offers are now regular MENU items (cat: "offers"), so this
+   mirrors renderLimited() and uses the same cart / Add to Cart
+   flow as the rest of the site, including the Classic/Spicy
+   selector (per request: "add to the offers option to select
+   spicy or classic").
    ============================================================ */
-/* ============================================================
-   ============ NEW ADDITION — SHARED OFFER CARD HTML ==========
-   Builds one offer card's markup. Used in two places: the main
-   Menu grid (via renderMenu, wrapped so it's filterable) and the
-   dedicated Limited Offers section (via renderLimitedOffers).
-   colClass lets each caller size the column to match its grid.
-   ============================================================ */
-function offerCardHTML(offer, colClass) {
-  const name = currentLang === "ar" ? offer.nameAr : offer.nameEn;
-  const secondaryName = currentLang === "ar" ? offer.nameEn : offer.nameAr;
-  const desc = currentLang === "ar" ? offer.descAr : offer.descEn;
-
-  return `
-    <div class="${colClass}" data-cat="offers">
-      <div class="limited-card reveal">
-        <span class="limited-badge"><i class="bi bi-star-fill"></i> ${t("offerBadge")}</span>
-        <div class="limited-img">
-          <img src="${offer.image}" alt="${offer.nameEn}" style="width:100%;height:100%;object-fit:cover;">
-        </div>
-        <div class="limited-body">
-          <h4>${name}</h4>
-          <span class="ar">${secondaryName}</span>
-          <p class="limited-desc">${desc}</p>
-          <div class="d-flex justify-content-between align-items-center mt-2">
-            <span class="limited-price">
-              ${offer.price} ${currencyLabel()}
-              ${
-                offer.oldPrice
-                  ? `<span class="limited-old-price">${t("offerWas")} ${offer.oldPrice} ${currencyLabel()}</span>`
-                  : ""
-              }
-            </span>
-            <button class="menu-add-btn" onclick="handleAddClick(this,'${offer.id}')">
-              <i class="bi bi-bag-plus"></i> ${t("addToCart")}
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>`;
-}
-/* =================== END OF NEW ADDITION =================== */
-
 function renderLimitedOffers() {
   const grid = document.getElementById("limitedOffersGrid");
   if (!grid) return;
 
-  if (LIMITED_OFFERS.length === 0) {
+  if (OFFER_IDS.length === 0) {
     grid.innerHTML = `
       <div class="col-12">
         <div class="limited-empty reveal">
@@ -1582,12 +1611,49 @@ function renderLimitedOffers() {
     return;
   }
 
-  grid.innerHTML = LIMITED_OFFERS.map((offer) =>
-    offerCardHTML(offer, "col-md-6 col-lg-4"),
-  ).join("");
+  grid.innerHTML = OFFER_IDS.map((id) => {
+    const item = MENU.find((m) => m.id === id);
+    if (!item) return "";
+    const imgUrl = LIMITED_IMAGES[item.id];
+    const oldPriceHTML = item.oldPrice
+      ? `<span class="limited-old-price">${t("offerWas")} ${item.oldPrice} ${currencyLabel()}</span>`
+      : "";
+    return `
+      <div class="col-md-6 col-lg-4">
+        <div class="limited-card reveal">
+          <span class="limited-badge"><i class="bi bi-star-fill"></i> ${t("offerBadge")}</span>
+          <div class="limited-img">
+            ${
+              imgUrl
+                ? `<img src="${imgUrl}" alt="${item.nameEn}" style="width:100%;height:100%;object-fit:cover;">`
+                : `<i class="bi ${CAT_ICONS[item.cat] || "bi-fire"}"></i>`
+            }
+          </div>
+          <div class="limited-body">
+            <h4>${itemName(item)}</h4>
+            <span class="ar">${itemSecondaryName(item)}</span>
+            <p class="limited-desc">${itemDesc(item)}</p>
+            <div class="variant-row">
+              <div class="variant-group variant-group-full">
+                <label>${t("labelStyle")}</label>
+                <select class="variant-flavor">
+                  ${OFFER_FLAVORS.map((f) => `<option value="${f}">${optionLabel(f)}</option>`).join("")}
+                </select>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-2">
+              <span class="limited-price">${item.price} ${currencyLabel()} ${oldPriceHTML}</span>
+              <button class="btn btn-fire btn-sm" onclick="handleAddClick(this,'${item.id}')">
+                <i class="bi bi-bag-plus"></i> ${t("addToCart")}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>`;
+  }).join("");
   observeReveals();
 }
-/* =================== END OF NEW ADDITION =================== */
+/* =================== END OF UPDATE =================== */
 
 /* ---------- FILTERS ---------- */
 document.getElementById("menuFilters").addEventListener("click", (e) => {
@@ -1713,15 +1779,8 @@ function spawnEmbers() {
 /* ---------- EMPTY CART BUTTON ---------- */
 document.getElementById("emptyCartBtn").addEventListener("click", emptyCart);
 
-/* ---------- CLEAR CART AFTER CHECKOUT ----------
-   Once the order is sent to WhatsApp, the cart shouldn't stick around,
-   so it's cleared right after the WhatsApp tab opens. */
-document.getElementById("checkoutBtn").addEventListener("click", () => {
-  setTimeout(emptyCart, 300);
-});
-
 /* ---------- LIVE UPDATE WHATSAPP LINK ON CONTACT INFO CHANGE ---------- */
-["customerPhone", "customerAddress"].forEach((id) => {
+["customerPhone", "customerAddress", "customerNotes"].forEach((id) => {
   document.getElementById(id).addEventListener("input", renderCart);
 });
 
